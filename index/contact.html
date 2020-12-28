@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Roboto+Condensed:ital,wght@0,
-300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Castoro:ital@0;1&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,700;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?
+  family=DM+Serif+Text:ital@0;1&
+  family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&
+  family=Amiri:ital,wght@0,400;0,700;1,400;1,700&
+  family=Castoro:ital@0;1&
+  family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&
+  family=Ubuntu+Mono:ital,wght@0,700;1,700&
+  family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&
+display=swap" rel="stylesheet">
 
 <html lang="en" dir="ltr" color-mode="light">
 
@@ -23,8 +26,6 @@
 
   <header class="main-head">
     <h4 class="main-head-item upcase">Scott Silsbe</h4>
-    <!-- <button class="color-mode-btn light-hidden upcase">Light</button>
-    <button class="color-mode-btn dark-hidden upcase">Dark</button> -->
     <div class="upcase main-head-item theme-switch-label light-hidden">go light</div>
     <div class="upcase main-head-item theme-switch-label dark-hidden">go dark</div>
     <label class="theme-switch main-head-item">
@@ -38,7 +39,7 @@
     <a class="main-nav-item" href="../index/resume.html">Resume</a>
     <a class="main-nav-item" href="../index/writing.html">Writing</a>
     <a class="main-nav-item this-page" href="../index/contact.html">Contact</a>
-    <a class="main-nav-item" href="../index/timer.html">Timer</a>
+    <!-- <a class="main-nav-item" href="../index/timer.html">Timer</a> -->
     <div class="dropdown">
       <button class="mobile-nav-button" href="../index/contact.html">
         <img src="../assets/icons/chevrons-white.svg" class="icon-highlight">
@@ -59,16 +60,16 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </section>
     <div class="content-text-box content-text-box-right">
-      <form action="action_page.php">
+      <form method="post" action="../php/contact.php">
 
-        <label for="name" class="upcase contact-label">Name</label>
-        <input type="text" id="name" name="name" placeholder="Name">
+        <label for="Name" class="upcase contact-label">Name</label>
+        <input type="text" id="Name" name="Name" placeholder="Name">
 
-        <label for="email" class="upcase contact-label">Email</label>
-        <input type="email" id="email" email="email" placeholder="Email">
+        <label for="Email" class="upcase contact-label">Email</label>
+        <input type="email" id="Email" email="Email" placeholder="Email">
 
-        <label for="subject" class="upcase contact-label">Message</label>
-        <textarea id="subject" name="subject" placeholder="Message" style="height:200px"></textarea>
+        <label for="Message" class="upcase contact-label">Message</label>
+        <textarea id="Message" name="Message" placeholder="Message" style="height:200px"></textarea>
 
         <input type="submit" value="send it" class="contact-button upcase">
 
