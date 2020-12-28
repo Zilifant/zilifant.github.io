@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Roboto+Condensed:ital,wght@0,
+300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Castoro:ital@0;1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,700;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+<html lang="en" dir="ltr" color-mode="light">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../styles/style.css" id="theme-link">
+  <!-- <link rel="stylesheet" href="../styles/animations.css"> -->
+  <title>Scott Silsbe - Contact</title>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <header class="main-head">
+    <h4 class="main-head-item upcase">Scott Silsbe</h4>
+    <!-- <button class="color-mode-btn light-hidden upcase">Light</button>
+    <button class="color-mode-btn dark-hidden upcase">Dark</button> -->
+    <div class="upcase main-head-item theme-switch-label light-hidden">go light</div>
+    <div class="upcase main-head-item theme-switch-label dark-hidden">go dark</div>
+    <label class="theme-switch main-head-item">
+      <input type="checkbox" id="slide">
+      <span class="slider preload"></span>
+    </label>
+  </header>
+
+  <nav class="main-nav">
+    <a class="main-nav-item" href="../index/biography.html">Home</a>
+    <a class="main-nav-item" href="../index/resume.html">Resume</a>
+    <a class="main-nav-item" href="../index/writing.html">Writing</a>
+    <a class="main-nav-item this-page" href="../index/contact.html">Contact</a>
+    <a class="main-nav-item" href="../index/timer.html">Timer</a>
+    <div class="dropdown">
+      <button class="mobile-nav-button" href="../index/contact.html">
+        <img src="../assets/icons/chevrons-white.svg" class="icon-highlight">
+        <div class="">Scott Silsbe</div>
+      </button>
+      <div class="dropdown-content">
+        <a class="dropdown-nav-item" href="../index/biography.html"><div>Home</div></a>
+        <a class="dropdown-nav-item" href="../index/resume.html"><div>Resume</div></a>
+        <a class="dropdown-nav-item" href="../index/writing.html"><div>Writing</div></a>
+        <a class="dropdown-nav-item this-page" href="../index/contact.html"><div>Contact</div></a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="content-1-col">
+    <section class="content-text-box content-text-box-left">
+      <h6 class="upcase">Contact me</h6>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </section>
+    <div class="content-text-box content-text-box-right">
+      <form action="action_page.php">
+
+        <label for="name" class="upcase contact-label">Name</label>
+        <input type="text" id="name" name="name" placeholder="Name">
+
+        <label for="email" class="upcase contact-label">Email</label>
+        <input type="email" id="email" email="email" placeholder="Email">
+
+        <label for="subject" class="upcase contact-label">Message</label>
+        <textarea id="subject" name="subject" placeholder="Message" style="height:200px"></textarea>
+
+        <input type="submit" value="send it" class="contact-button upcase">
+
+      </form>
+    </div>
+  </div>
+
+  <div class="main-head-left"></div>
+  <div class="main-head-right"></div>
+  <div class="side-right"></div>
+  <div class="side-left"></div>
+  <div class="main-footer-left"></div>
+  <div class="main-footer-right"></div>
+
+  <footer class="main-footer">
+    <p class="main-footer-item footer-item-left" id="quoteDisplay"></p>
+    <div class="main-footer-item footer-item-center">
+      <a href="url" class="social-media-icon"><img src="../assets/icons/email-logo-light.png"></a>
+      <a href="url" class="social-media-icon"><img src="../assets/icons/linkedin-logo-light.png"></a>
+      <a href="url" class="social-media-icon"><img src="../assets/icons/twitter-logo-light.png"></a>
+    </div>
+    <p class="main-footer-item footer-item-right" id="copyright-2-line">© 2020 Scott Silsbe<br>All Rights Reserved</p>
+    <p class="main-footer-item footer-item-right" id="copyright-1-line">© 2020 Scott Silsbe. All Rights Reserved</p>
+  </footer>
+</div>
+
+</body>
+
+<script src="../scripts/script.js"></script>
+
+</html>
+
