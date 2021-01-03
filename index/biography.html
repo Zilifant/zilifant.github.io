@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Castoro:ital@0;1&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,700;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
-<html lang="en" dir="ltr" color-mode="light">
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+<html lang="en" dir="ltr" light-dark-colors="light" id="home-page">
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="../styles/style.css" id="theme-link">
+  <link rel="stylesheet" type="text/css" href="../styles/style.css">
   <title>Scott Silsbe - Home</title>
 </head>
 
@@ -16,6 +18,7 @@
 <div class="wrapper">
 
   <header class="main-head">
+    <div class="main-head-full-width-bg"></div>
     <h4 class="main-head-item upcase">Scott Silsbe</h4>
     <div class="upcase main-head-item theme-switch-label light-hidden">Go Light</div>
     <div class="upcase main-head-item theme-switch-label dark-hidden">Go Dark</div>
@@ -25,29 +28,35 @@
     </label>
   </header>
 
-  <nav class="main-nav">
-    <a class="main-nav-item this-page" href="../index/biography.html">Home</a>
-    <a class="main-nav-item" href="../index/resume.html">Resume</a>
-    <a class="main-nav-item" href="../index/writing.html">Writing</a>
+  <nav id="nav-home" class="main-nav">
+    <a id="home" class="main-nav-item this-page" href="../index/biography.html">Home</a>
+    <a id="resume" class="main-nav-item" href="../index/resume.html">Resume</a>
+    <a id="writing" class="main-nav-item" href="../index/writing.html">Writing</a>
+    <a id="contact" class="main-nav-item" href="../index/contact.html">Contact</a>
     <div class="dropdown">
-      <button class="mobile-nav-button" href="../index/contact.html">
-        <img src="../assets/icons/chevrons-white.svg" class="icon-highlight">
-        <div class="transparent">Scott Silsbe</div>
+      <button class="mobile-nav-button">
+        <div class="dropdown-icon">
+          <div class="dropdown-icon-bar"></div>
+          <div class="dropdown-icon-bar"></div>
+          <div class="dropdown-icon-bar"></div>
+        </div>
+        <div>Scott Silsbe</div>
       </button>
       <div class="dropdown-content">
         <a class="dropdown-nav-item this-page" href="../index/biography.html"><div>Home</div></a>
         <a class="dropdown-nav-item" href="../index/resume.html"><div>Resume</div></a>
         <a class="dropdown-nav-item" href="../index/writing.html"><div>Writing</div></a>
+        <a class="dropdown-nav-item" href="../index/contact.html"><div>Contact</div></a>
       </div>
     </div>
   </nav>
 
   <div class="content-1-col">
     <section class="content-text-box">
-        <h6 class="upcase">ABOUT ME</h6>
-        <p>I am an event producer and experience designer living in the greater NYC area.</p>
-        <p>I have produced and run a wide variety of interactive events experienced by over 5,000 people ~ from gamified wedding receptions and trade show promotions to large-scale political wargames and escape rooms at major gaming conventions.</p>
-        <p>For some of my work, see my company, Liveware Lab.</p>
+        <h6 class="upcase">About me</h6>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </section>
     <div class="logo-flex">
       <div class="logo-wrapper">

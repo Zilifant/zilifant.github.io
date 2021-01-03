@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Castoro:ital@0;1&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,700;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
-<html lang="en" dir="ltr" color-mode="light">
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+<html lang="en" dir="ltr" light-dark-colors="light" id="resume-page">
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="../styles/style.css" id="theme-link">
+  <link rel="stylesheet" href="../styles/style.css">
   <title>Scott Silsbe - Resume</title>
 </head>
 
@@ -16,6 +18,7 @@
 <div class="wrapper">
 
   <header class="main-head">
+    <div class="main-head-full-width-bg"></div>
     <h4 class="main-head-item upcase">Scott Silsbe</h4>
     <div class="upcase main-head-item theme-switch-label light-hidden">Go Light</div>
     <div class="upcase main-head-item theme-switch-label dark-hidden">Go Dark</div>
@@ -25,19 +28,25 @@
     </label>
   </header>
 
-  <nav class="main-nav">
-    <a class="main-nav-item" href="../index/biography.html">Home</a>
-    <a class="main-nav-item this-page" href="../index/resume.html">Resume</a>
-    <a class="main-nav-item" href="../index/writing.html">Writing</a>
+  <nav id="nav-resume" class="main-nav">
+    <a id="home" class="main-nav-item" href="../index/biography.html">Home</a>
+    <a id="resume" class="main-nav-item this-page" href="../index/resume.html">Resume</a>
+    <a id="writing" class="main-nav-item" href="../index/writing.html">Writing</a>
+    <a id="contact" class="main-nav-item" href="../index/contact.html">Contact</a>
     <div class="dropdown">
-      <button class="mobile-nav-button" href="../index/contact.html">
-        <img src="../assets/icons/chevrons-white.svg" class="icon-highlight">
-        <div class="transparent">Scott Silsbe</div>
+      <button class="mobile-nav-button">
+        <div class="dropdown-icon">
+          <div class="dropdown-icon-bar"></div>
+          <div class="dropdown-icon-bar"></div>
+          <div class="dropdown-icon-bar"></div>
+        </div>
+        <div>Scott Silsbe</div>
       </button>
       <div class="dropdown-content">
         <a class="dropdown-nav-item" href="../index/biography.html"><div>Home</div></a>
         <a class="dropdown-nav-item this-page" href="../index/resume.html"><div>Resume</div></a>
         <a class="dropdown-nav-item" href="../index/writing.html"><div>Writing</div></a>
+        <a class="dropdown-nav-item" href="../index/contact.html"><div>Contact</div></a>
       </div>
     </div>
   </nav>
@@ -47,11 +56,11 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
     <div class="content-text-box content-text-box-left">
-      <h5 class="upcase slide-in">Experience</h5>
+      <h5 class="upcase title">Experience</h5>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
     <div class="content-text-box content-text-box-right">
-      <h5 class="upcase bullet-fix">Position</h5>
+      <h5 class="upcase title bullet-fix">Position</h5>
       <ul>
         <li class="bullet-fix"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span></li>
         <li class="bullet-fix"><span>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
@@ -64,11 +73,11 @@
       </ul>
     </div>
     <div class="content-text-box content-text-box-left">
-      <h5 class="upcase">Experience</h5>
+      <h5 class="upcase title">Experience</h5>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
     <div class="content-text-box content-text-box-right">
-      <h5 class="upcase bullet-fix">Position</h5>
+      <h5 class="upcase title bullet-fix">Position</h5>
       <ul>
         <li class="bullet-fix"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span></li>
         <li class="bullet-fix"><span>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
