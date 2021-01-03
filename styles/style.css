@@ -246,8 +246,6 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --header-bg: var(--truG9);
   --nav-text: var(--truG9);
   --nav-bg: var(--colG2);
-  /* --nav-bg-hover: var(--cyan6);
-  --nav-bg-hover-thispage: var(--oran5); */
   --social-media-icon-bg-hover: var(--accent);
   --social-media-icon-bg: var(--colG5);
   --footer-text: var(--colG5);
@@ -283,8 +281,6 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --header-bg: var(--truG9);
   --nav-text: var(--colG2);
   --nav-bg: var(--gray8);
-  /* --nav-bg-hover: var(--cyan6);
-  --nav-bg-hover-thispage: var(--oran5); */
   --social-media-icon-bg-hover: var(--accent);
   --social-media-icon-bg: var(--gray8);
   --footer-text: var(--gray7);
