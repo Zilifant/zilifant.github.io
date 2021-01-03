@@ -940,6 +940,9 @@ textarea:focus label {
 }
 
 input[type=submit] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background-color: var(--button-bg);
   color: var(--button-text);
   padding: 9px 15px;
