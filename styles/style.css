@@ -246,6 +246,9 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --header-bg: var(--truG9);
   --nav-text: var(--truG9);
   --nav-bg: var(--colG2);
+  --mob-nav-button-text: var(--colG2);
+  --mob-nav-button-bg: var(--truG9);
+  --mob-nav-button-bg-hover: var(--colG3);
   --social-media-icon-bg-hover: var(--accent);
   --social-media-icon-bg: var(--colG5);
   --footer-text: var(--colG5);
@@ -281,6 +284,9 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --header-bg: var(--truG9);
   --nav-text: var(--colG2);
   --nav-bg: var(--gray8);
+  --mob-nav-button-text: var(--colG2);
+  --mob-nav-button-bg: var(--truG9);
+  --mob-nav-button-bg-hover: var(--bg);
   --social-media-icon-bg-hover: var(--accent);
   --social-media-icon-bg: var(--gray8);
   --footer-text: var(--gray7);
@@ -1100,11 +1106,12 @@ input:checked + .slider:before {
     position: relative;
     width: 100%;
     padding: .75rem 1.5rem;
-    background: var(--nav-bg);
+    background: var(--mob-nav-button-bg);
     border: none;
+    z-index: 1;
   }
   .mobile-nav-button > div {
-    color: var(--nav-text);
+    color: var(--mob-nav-button-text);
     text-decoration: none;
     font-size: 1.25rem;
     text-transform: uppercase;
@@ -1113,7 +1120,7 @@ input:checked + .slider:before {
   }
 
   .dropdown-icon {
-    height: 28px;
+    height: 20px;
     width: 30px;
     position: absolute;
     top: 50%;
@@ -1121,23 +1128,24 @@ input:checked + .slider:before {
     left: 1.5rem;
   }
   .dropdown-icon > div {
-    background: var(--nav-text);
-    height: 6px;
+    background: var(--mob-nav-button-text);
+    height: 4px;
     width: 100%;
     border-radius: var(--rad);
   }
   .dropdown-icon > div:nth-child(2) {
-    margin: 5px 0;
+    margin: 4px 0;
   }
-
   .dropdown {
     width: 100%;
   }
   .dropdown-content {
-    display: none;
+    display: block;
     position: absolute;
+    top: -144px;
     width: 100%;
-    z-index: 1;
+    /* z-index: 1; */
+    transition: .25s;
   }
   .dropdown-content > a {
     display: block;
@@ -1152,10 +1160,14 @@ input:checked + .slider:before {
     text-transform: uppercase;
     letter-spacing: .1rem;
   }
+  .dropdown-nav-item:hover > div {
+    /* color: var(--accent); */
+    background: var(--mob-nav-button-bg-hover);
+  }
   .dropdown:hover .dropdown-content {
     display: block;
+    transform: translateY(192px);
   }
-
   .dropdown:hover .mobile-nav-button > .dropdown-icon > .dropdown-icon-bar{
     background: var(--accent);
   }
