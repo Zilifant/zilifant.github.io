@@ -401,7 +401,6 @@ p, ul, ol, li, li > span {
 
 .title {
   color: var(--text-alt-title);
-  font-weight: 500;
 }
 
 .transparent {
@@ -743,7 +742,7 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 .centered-title {
   padding-bottom: 30px;
   text-align: center;
-  line-height: 1.75rem;
+  line-height: 2.5rem;
 }
 
 .p1 > span,
@@ -876,7 +875,7 @@ li > span {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: var(--partner-logo-bg);
+  /* background: var(--partner-logo-bg); */
   border-radius: var(--rad);
   padding: .75rem;
   margin: .5rem;

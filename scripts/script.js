@@ -25,14 +25,36 @@ function switchTheme(e) {
   if (e.target.checked) {
     document.documentElement.setAttribute('light-dark-colors', 'dark');
     localStorage.setItem('theme', 'dark');
+    let imglist = document.getElementsByClassName("light-dark-img");
+    for (let i = 0; i < imglist.length; i++) {
+      imglist[i].setAttribute('src', `../assets/partner-logos/${imglist[i].id}-light.png`);
+    }
   }
   else {
     document.documentElement.setAttribute('light-dark-colors', 'light');
     localStorage.setItem('theme', 'light');
+    let imglist = document.getElementsByClassName("light-dark-img");
+    for (let i = 0; i < imglist.length; i++) {
+      imglist[i].setAttribute('src', `../assets/partner-logos/${imglist[i].id}-color.png`);
+    }
   }
 }
 
 toggleSwitch.addEventListener('change', switchTheme, false);
+
+// function imgToLight(element) {
+//   document.getElementById(element).setAttribute('src', `../assets/partner-logos/${element}-light`)
+// }
+
+// function imgToColor(element) {
+//   document.getElementById(element).setAttribute('src', `../assets/partner-logos/${element}-color`)
+// }
+
+// let test = document.getElementsByClassName("logo-flex");
+// console.log(test[0]);
+// test[0].setAttribute('src', `${this.id}.com`);
+// console.log(test[0]);
+// console.log(test[0].id);
 
 /*-------------------*/
 /*Footer Random Quote*/
