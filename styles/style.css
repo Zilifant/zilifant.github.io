@@ -399,6 +399,10 @@ p, ul, ol, li, li > span {
   letter-spacing: .1rem;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .title {
   color: var(--text-alt-title);
 }
@@ -729,6 +733,59 @@ Y88b  d88P Y88b. .d88P 888   Y8888
   padding-bottom: 30px;
 }
 
+/*RESUME
+8888888b.  8888888888  .d8888b.  
+888   Y88b 888        d88P  Y88b 
+888    888 888        Y88b.      
+888   d88P 8888888     "Y888b.   
+8888888P"  888            "Y88b. 
+888 T88b   888              "888 
+888  T88b  888        Y88b  d88P 
+888   T88b 8888888888  "Y8888P"  */
+
+.collapsible-header {
+  cursor: pointer;
+  background: var(--colG3);
+}
+
+.collapsible-header:hover {
+  background: var(--blue2);
+}
+
+.collapsible-content {
+  background: var(--colG2);
+  display: none;
+  /* overflow: hidden; */
+}
+
+/*LIST
+888      8888888  .d8888b.  88888888888 
+888        888   d88P  Y88b     888     
+888        888   Y88b.          888     
+888        888    "Y888b.       888     
+888        888       "Y88b.     888     
+888        888         "888     888     
+888        888   Y88b  d88P     888     
+88888888 8888888  "Y8888P"      888     */
+
+li::marker {
+  content: "⇒‎‏‏‎‏‏‎‏‏‎";
+  font-size: 1.25rem;
+  color: var(--text-alt-faded);
+}
+
+li {
+  margin-bottom: .25rem;
+}
+
+li > span {
+  color: var(--text);
+}
+
+.bullet-fix {
+  padding-left: 10px;
+}
+
 /*WRITING
 888       888 8888888b.  8888888 88888888888 
 888   o   888 888   Y88b   888       888     
@@ -799,34 +856,6 @@ span > em {
   margin-bottom: 1.5rem;
 }
 
-/*LIST
-888      8888888  .d8888b.  88888888888 
-888        888   d88P  Y88b     888     
-888        888   Y88b.          888     
-888        888    "Y888b.       888     
-888        888       "Y88b.     888     
-888        888         "888     888     
-888        888   Y88b  d88P     888     
-88888888 8888888  "Y8888P"      888     */
-
-li::marker {
-  content: "⇒‎‏‏‎‏‏‎‏‏‎";
-  font-size: 1.25rem;
-  color: var(--text-alt-faded);
-}
-
-li {
-  margin-bottom: .25rem;
-}
-
-li > span {
-  color: var(--text);
-}
-
-.bullet-fix {
-  padding-left: 10px;
-}
-
 /*PHOTO
 8888888b.  888    888  .d88888b.  88888888888  .d88888b.  
 888   Y88b 888    888 d88P" "Y88b     888     d88P" "Y88b 
@@ -864,22 +893,25 @@ li > span {
 .logo-flex {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
   margin-top: 50px;
   align-items: center;
+  justify-content: space-between;
 }
 
 .logo-wrapper {
   display: flex;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  /* background: var(--colG5); */
-  height: 100px;
-  width: 225px;
-  margin-bottom: 50px;
+  /* background: var(--colG3); */
+  margin-bottom: 30px;
+}
+
+.logo-wrapper > img {
+  max-width: 160px;
+  /* border: 1px solid black; */
 }
 
 /*CONTACT FORM
