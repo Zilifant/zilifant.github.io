@@ -743,20 +743,82 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 888  T88b  888        Y88b  d88P 
 888   T88b 8888888888  "Y8888P"  */
 
+.resume-title {
+  color: var(--text-alt-title);
+  margin-bottom: 0;
+  line-height: 1em;
+}
+
+.resume-title + p {
+  margin-top: .5rem;
+}
+
 .collapsible-header {
   cursor: pointer;
+  /* background: var(--colG3); */
+  display: flex;
+}
+
+.coll-header-text {
+  margin-left: 1rem;
+  padding-bottom: 1rem;
+}
+
+.resume-divider {
+  width: 712px;
+  height: 2px;
+  position: relative;
+  right: calc(-1rem - 4px);
   background: var(--colG3);
 }
 
-.collapsible-header:hover {
-  background: var(--blue2);
+.collapsible-header:hover .ci-wrapper > .collapsible-icon {
+  background: var(--cyan4);
+}
+
+/* .collapsible-header:active .ci-wrapper > .collapsible-icon {
+  background: var(--cyan3);
+  transition: .2s;
+} */
+
+.ci-wrapper {
+  margin-right: 0;
+}
+
+.collapsible-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  clip-path: polygon(40% 0, 60% 0, 60% 40%, 100% 40%, 100% 60%, 60% 60%, 60% 100%, 40% 100%, 40% 60%, 0 60%, 0 40%, 40% 40%);
+  background: var(--cyan5);
+  transition: .5s;
+}
+
+.rotated .collapsible-icon {
+  background: var(--oran5);
+  transform: rotate(135deg);
+}
+
+.rotated:hover .ci-wrapper > .collapsible-icon {
+  background: var(--oran4);
 }
 
 .collapsible-content {
-  background: var(--colG2);
-  display: none;
-  /* overflow: hidden; */
+  /* background: var(--colG2); */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
 }
+
+/* .collapsible-header:after {
+  content: '\02795';
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+.collapsible-header.active:after {
+  content: "\2796";
+} */
 
 /*LIST
 888      8888888  .d8888b.  88888888888 
@@ -768,22 +830,24 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 888        888   Y88b  d88P     888     
 88888888 8888888  "Y8888P"      888     */
 
-li::marker {
-  content: "⇒‎‏‏‎‏‏‎‏‏‎";
-  font-size: 1.25rem;
-  color: var(--text-alt-faded);
+ul {
+  margin-left: 4rem;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.collapsible-content ul > li:first-child {
+  padding-top: 1rem;
+  border-top: 2px solid var(--colG3);
 }
 
 li {
   margin-bottom: .25rem;
+  margin-left: 2.5rem;
 }
 
 li > span {
   color: var(--text);
-}
-
-.bullet-fix {
-  padding-left: 10px;
 }
 
 /*WRITING

@@ -5,10 +5,13 @@
 /* Remove Preload */
 document.addEventListener("DOMContentLoaded", function() {
   setTimeout(function() {
-    let targetNode = document.querySelector('.preload');
-    targetNode.classList.remove('preload');
+    let targetNodes = document.querySelectorAll('.preload');
+    let i;
+    for (i = 0; i < targetNodes.length; i++) {
+      targetNodes[i].classList.remove('preload');
+    }
   }, 1000)
-});
+})
 
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
@@ -79,6 +82,27 @@ toggleSwitch.addEventListener('change', switchTheme, false);
   let randomQuote = Math.floor(Math.random() * quotes.length);
   document.getElementById("quoteDisplay").innerHTML = quotes[randomQuote];
 })();
+
+/*-------------------*/
+/*Collapsible Lists--*/
+/*-------------------*/
+
+let coll = document.getElementsByClassName("collapsible-header");
+let i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    console.log("active");
+    this.classList.toggle("active");
+    this.classList.toggle("rotated");
+    let content = this.nextElementSibling;
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
 
 /*-----------------------------*/
 /*Obsolete --------------------*/
