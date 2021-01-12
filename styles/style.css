@@ -235,7 +235,7 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
 
 :root[light-dark-colors="light"] .light-hidden {display: none;}
 :root[light-dark-colors="light"] {
-  --text: var(--truG8);
+  --text: var(--truG6);
   --text-alt-faded: var(--colG4);
   --text-alt-bright: var(--indi5);
   --text-alt-title: var(--truG9);
@@ -267,8 +267,8 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --accent-resume: var(--cyan5);
   --accent-writing: var(--oran4);
   --accent-contact: var(--emer5);
-  --light-dark-text-weight-adjust: 300;
-  --light-dark-nav-text-weight-adjust: 500;
+  --light-dark-text-weight-adjust: 400;
+  --light-dark-nav-text-weight-adjust: 450;
 }
 
 :root[light-dark-colors="dark"] .dark-hidden {display: none;}
@@ -359,19 +359,20 @@ body {
 *:before,
 *:after {
   font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 16px;
   color: var(--text);
   margin: 0;
   padding: 0;
 }
 
-h1,h2,h3,h4,h5,h6,li,ol,p,ul{font-style:normal;text-decoration:none}h1,h2,h3,h4,h5,h6{font-weight:400}h1{font-size:2.5rem}h2{font-size:2.25rem}h3{font-size:2rem}h4{font-size:1.75rem}h5{font-size:1.5rem}h6{font-size:1.25rem}
+h1,h2,h3,h4,h5,h6,li,ol,p,ul{font-style:normal;text-decoration:none}h1,h2,h3,h4,h5,h6{font-weight:var(--light-dark-text-weight-adjust)}h1{font-size:2.5rem}h2{font-size:2.25rem}h3{font-size:2rem}h4{font-size:1.75rem}h5{font-size:1.5rem}h6{font-size:1.25rem}
 
 p, ul, ol, li, li > span {
-  font-size: 1.25rem;
+  font-size: 17px;
   line-height: 1.75rem;
   font-weight: var(--light-dark-text-weight-adjust);
-  letter-spacing: .05rem;
+  letter-spacing: .02rem;
 }
 
 /* a {
@@ -394,9 +395,9 @@ p, ul, ol, li, li > span {
 }
 
 .upcase {
-  font-family: 'Roboto Condensed', sans-serif;
+  /* font-family: 'Roboto Condensed', sans-serif; */
   text-transform: uppercase;
-  letter-spacing: .1rem;
+  letter-spacing: .05rem;
 }
 
 .italic {
@@ -527,7 +528,7 @@ nav {
   font-size: 1.25rem;
   /* font-family: 'Roboto Condensed', sans-serif; */
   text-transform: uppercase;
-  letter-spacing: .1rem;
+  letter-spacing: .05rem;
   font-weight: var(--light-dark-nav-text-weight-adjust);
 }
 
@@ -783,7 +784,8 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 }
 
 .resume-title {
-  color: var(--text-alt-title);
+  /* color: var(--text-alt-title); */
+  font-weight: var(--light-dark-nav-text-weight-adjust);
   margin-bottom: 0;
   line-height: 1em;
 }
