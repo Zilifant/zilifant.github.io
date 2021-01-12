@@ -743,37 +743,13 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 888  T88b  888        Y88b  d88P 
 888   T88b 8888888888  "Y8888P"  */
 
-.resume-title {
-  color: var(--text-alt-title);
-  margin-bottom: 0;
-  line-height: 1em;
-}
-
-.resume-title + p {
-  margin-top: .5rem;
-}
-
 .collapsible-header {
   cursor: pointer;
-  /* background: var(--colG3); */
   display: flex;
 }
 
-.coll-header-text {
-  margin-left: 1rem;
-  padding-bottom: 1rem;
-}
-
-.resume-divider {
-  width: 712px;
-  height: 2px;
-  position: relative;
-  right: calc(-1rem - 4px);
-  background: var(--colG3);
-}
-
 .collapsible-header:hover .ci-wrapper > .collapsible-icon {
-  background: var(--cyan4);
+  background: var(--cyan5);
 }
 
 /* .collapsible-header:active .ci-wrapper > .collapsible-icon {
@@ -794,56 +770,61 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 }
 
 .rotated .collapsible-icon {
-  background: var(--oran5);
+  background: var(--cyan5);
   transform: rotate(135deg);
 }
 
 .rotated:hover .ci-wrapper > .collapsible-icon {
-  background: var(--oran4);
+  background: var(--cyan5);
+}
+
+.coll-header-text {
+  margin-left: 1rem;
+}
+
+.resume-title {
+  color: var(--text-alt-title);
+  margin-bottom: 0;
+  line-height: 1em;
+}
+
+.resume-title + p {
+  margin-top: .5rem;
+}
+
+.resume-divider {
+  width: calc(100% - 5.5rem);
+  height: 2px;
+  position: relative;
+  right: calc(-1rem - 4px);
+  background: var(--colG3);
+}
+
+.collapsible-content > .resume-divider {
+  margin-top: 0;
+  right: calc(-2rem - 8px);
 }
 
 .collapsible-content {
-  /* background: var(--colG2); */
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
 }
 
-/* .collapsible-header:after {
-  content: '\02795';
-  font-size: 13px;
-  color: white;
-  float: right;
-  margin-left: 5px;
-}
-.collapsible-header.active:after {
-  content: "\2796";
-} */
-
-/*LIST
-888      8888888  .d8888b.  88888888888 
-888        888   d88P  Y88b     888     
-888        888   Y88b.          888     
-888        888    "Y888b.       888     
-888        888       "Y88b.     888     
-888        888         "888     888     
-888        888   Y88b  d88P     888     
-88888888 8888888  "Y8888P"      888     */
-
 ul {
-  margin-left: 4rem;
-  padding-left: 0;
-  list-style-type: none;
-}
-
-.collapsible-content ul > li:first-child {
-  padding-top: 1rem;
-  border-top: 2px solid var(--colG3);
+  margin-top: 0 !important;
+  padding-left: calc(1rem + 3px);
+  list-style-type: disc;
 }
 
 li {
   margin-bottom: .25rem;
   margin-left: 2.5rem;
+  padding-left: .5rem;
+}
+
+li::marker {
+  color: var(--accent);
 }
 
 li > span {
