@@ -305,7 +305,7 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --accent-resume: var(--cyan6);
   --accent-writing: var(--oran5);
   --accent-contact: var(--emer6);
-  --light-dark-text-weight-adjust: 300;
+  --light-dark-text-weight-adjust: 350;
   --light-dark-nav-text-weight-adjust: 400;
 }
 
@@ -366,7 +366,7 @@ body {
   padding: 0;
 }
 
-h1,h2,h3,h4,h5,h6,li,ol,p,ul{font-style:normal;text-decoration:none}h1,h2,h3,h4,h5,h6{font-weight:var(--light-dark-text-weight-adjust)}h1{font-size:2.5rem}h2{font-size:2.25rem}h3{font-size:2rem}h4{font-size:1.75rem}h5{font-size:1.5rem}h6{font-size:1.25rem}
+h1,h2,h3,h4,h5,h6,li,ol,p,ul{font-style:normal;text-decoration:none}h1,h2,h3,h4,h5,h6{font-weight:400}h1{font-size:2.5rem}h2{font-size:2.25rem}h3{font-size:2rem}h4{font-size:1.75rem}h5{font-size:1.5rem}h6{font-size:1.25rem}
 
 p, ul, ol, li, li > span {
   font-size: 17px;
@@ -397,7 +397,7 @@ p, ul, ol, li, li > span {
 .upcase {
   /* font-family: 'Roboto Condensed', sans-serif; */
   text-transform: uppercase;
-  letter-spacing: .05rem;
+  letter-spacing: .1rem;
 }
 
 .italic {
@@ -405,7 +405,7 @@ p, ul, ol, li, li > span {
 }
 
 .title {
-  color: var(--text-alt-title);
+  font-weight: var(--light-dark-nav-text-weight-adjust);
 }
 
 .transparent {
@@ -493,7 +493,6 @@ Y88b  d88P 888  T88b    888   888  .d88P
 }
 
 .main-head-item {
-  /* display: inline-block; */
   color: var(--header-text);
   z-index: 0;
 }
@@ -526,9 +525,8 @@ nav {
   margin: 0 .1875rem;
   text-decoration: none;
   font-size: 1.25rem;
-  /* font-family: 'Roboto Condensed', sans-serif; */
   text-transform: uppercase;
-  letter-spacing: .05rem;
+  letter-spacing: .1rem;
   font-weight: var(--light-dark-nav-text-weight-adjust);
 }
 
@@ -852,10 +850,9 @@ li > span {
 .p1 > span,
 span > em,
 .ping-span {
-  font-size: 1.25rem;
+  font-size: 17px;
   font-weight: var(--light-dark-text-weight-adjust);
-  letter-spacing: .05rem;
-  /* line-height: 1.75rem; */
+  line-height: 1.75rem;
 }
 
 .p1 > span,
@@ -876,7 +873,7 @@ span > em {
 }
 
 .p2 > span {
-  font-size: 1rem;
+  font-size: 17px;
   font-family: 'Courier Prime', monospace;
   line-height: 1rem;
   color: var(--text-alt-bright);
@@ -1048,7 +1045,7 @@ Y88b  d88P 8888P   Y8888   888       888
 
 .theme-switch-label {
   position: absolute;
-  left: 644px;
+  left: 635px;
   color: var(--header-text);
   font-size: 1rem;
   text-justify: left;
