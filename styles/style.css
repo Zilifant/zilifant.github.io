@@ -263,6 +263,7 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --form-text: var(--gray8);
   --form-text-placeholder: var(--colG5);
   --partner-logo-bg: var(--colG1);
+  --divider: var(--colG3);
   --accent-home: var(--pink4);
   --accent-resume: var(--cyan5);
   --accent-writing: var(--oran4);
@@ -302,6 +303,7 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --form-text: var(--colG4);
   --form-text-placeholder: var(--colG5);
   --partner-logo-bg: var(--colG2);
+  --divider: var(--cyan5);
   --accent-home: var(--pink5);
   --accent-resume: var(--cyan6);
   --accent-writing: var(--oran5);
@@ -416,16 +418,19 @@ p, ul, ol, li, li > span {
   opacity: 50%;
 }
 
-.divider {
+.divider,
+.divider-writing,
+.divider-resume {
   height: 1px;
-  background: var(--colG3);
+  background: var(--divider);
+}
+
+.divider {
   margin-top: 1rem !important;
   margin-bottom: 2rem !important;
 }
 
 .divider-writing {
-  height: 1px;
-  background: var(--colG3);
   margin-top: 2rem !important;
   margin-bottom: 2rem !important;
 }
@@ -533,7 +538,7 @@ nav {
 .main-nav {
   background: var(--nav-bg);
   align-items: center;
-  /* border-top: 5px solid var(--accent); */
+  border-bottom: 1px solid var(--divider);
 }
 
 .main-nav-item {
@@ -619,7 +624,7 @@ nav {
 .main-footer-left,
 .main-footer-right {
   background: var(--footer-bg);
-  /* border-top: 5px solid var(--accent); */
+  border-top: 1px solid var(--colG1);
 }
 
 .main-footer-item {
@@ -737,7 +742,7 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 
 .headshot-wrapper {
   object-fit: contain;
-  background: var(--colG5);
+  /* background: var(--colG5); */
 }
 
 .headshot-wrapper > img {
@@ -831,15 +836,13 @@ Y88b  d88P Y88b. .d88P 888   Y8888
   margin-top: .5rem;
 }
 
-.resume-divider {
+.divider-resume {
   width: calc(100% - 5.5rem);
-  height: 1px;
   position: relative;
   right: calc(-1rem - 4px);
-  background: var(--colG3);
 }
 
-.collapsible-content > .resume-divider {
+.collapsible-content > .divider-resume {
   margin-top: 0;
   width: 100%;
   right: calc(-2rem - 8px);
