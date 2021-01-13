@@ -269,6 +269,7 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --accent-contact: var(--emer5);
   --light-dark-text-weight-adjust: 400;
   --light-dark-nav-text-weight-adjust: 450;
+  --coll-icon-border-fix: var(--bg);
 }
 
 :root[light-dark-colors="dark"] .dark-hidden {display: none;}
@@ -307,6 +308,7 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --accent-contact: var(--emer6);
   --light-dark-text-weight-adjust: 350;
   --light-dark-nav-text-weight-adjust: 400;
+  --coll-icon-border-fix: RGBA(36, 36, 37, 1);
 }
 
 :root[light-dark-colors="light"]#home-page {
@@ -358,12 +360,14 @@ body {
 *,
 *:before,
 *:after {
-  font-family: 'Roboto', sans-serif;
   font-family: 'Rubik', sans-serif;
   font-size: 16px;
   color: var(--text);
   margin: 0;
   padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h1,h2,h3,h4,h5,h6,li,ol,p,ul{font-style:normal;text-decoration:none}h1,h2,h3,h4,h5,h6{font-weight:400}h1{font-size:2.5rem}h2{font-size:2.25rem}h3{font-size:2rem}h4{font-size:1.75rem}h5{font-size:1.5rem}h6{font-size:1.25rem}
@@ -779,12 +783,15 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 }
 
 .coll-icon-bg {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
   position: relative;
   top: calc(-1.5rem - 1px);
   left: -1px;
-  height: 100%;
-  width: 100%;
-  border: 1px solid var(--bg);
+  height: 22px;
+  width: 22px;
+  border: 2px solid var(--coll-icon-border-fix);
   z-index: 1;
 }
 
