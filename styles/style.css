@@ -416,6 +416,20 @@ p, ul, ol, li, li > span {
   opacity: 50%;
 }
 
+.divider {
+  height: 1px;
+  background: var(--colG3);
+  margin-top: 1rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.divider-writing {
+  height: 1px;
+  background: var(--colG3);
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
 /* GRID
  .d8888b.  8888888b.  8888888 8888888b.  
 d88P  Y88b 888   Y88b   888   888  "Y88b 
@@ -677,27 +691,6 @@ d88P  Y88b d88P" "Y88b 8888b   888
 Y88b  d88P Y88b. .d88P 888   Y8888 
  "Y8888P"   "Y88888P"  888    Y888 */
 
-.content-left > *,
-.content-right > *,
-.content-resume-left > *,
-.content-resume-right > * {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  line-height: 1.75rem;
-}
-
-.content-left > *,
-.content-resume-left > * {
-  margin-left: 5%;
-  margin-right: 2.5%;
-}
-
-.content-right > *,
-.content-resume-right > * {
-  margin-left: 2.5%;
-  margin-right: 5%;
-}
-
 .content-1-col {
   display: flex;
   flex-wrap: wrap;
@@ -713,27 +706,45 @@ Y88b  d88P Y88b. .d88P 888   Y8888
   /* color: var(--text); */
 }
 
-.content-text-box-full {
-  width: 100%;
-}
-
-.content-text-box-left {
-  width: 35%;
-}
-
-.content-text-box-right {
-  width: 65%;
-}
+.content-text-box-full {width: 100%;}
+.content-text-box-left {width: 35%;}
+.content-text-box-right {width: 65%;}
+.content-text-box-left-home {width: 30%;}
+.content-text-box-left-home > * {margin-right: 1rem;}
+.content-text-box-right-home {width: 70%;}
+.content-text-box-right-home > * {margin-left: 1rem;}
 
 .content-1-col,
 .content-left,
 .content-right,
 .content-resume-left,
 .content-resume-right {
-  /* background: var(--gray7o75); */
+  /* background: var(--gray7); */
   background: none;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/*PHOTO
+8888888b.  888    888  .d88888b.  88888888888  .d88888b.  
+888   Y88b 888    888 d88P" "Y88b     888     d88P" "Y88b 
+888    888 888    888 888     888     888     888     888 
+888   d88P 8888888888 888     888     888     888     888 
+8888888P"  888    888 888     888     888     888     888 
+888        888    888 888     888     888     888     888 
+888        888    888 Y88b. .d88P     888     Y88b. .d88P 
+888        888    888  "Y88888P"      888      "Y88888P"  */
+
+.headshot-wrapper {
+  object-fit: contain;
+  background: var(--colG5);
+}
+
+.headshot-wrapper > img {
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  border: 1px solid var(--colG3);
 }
 
 /*RESUME
@@ -822,7 +833,7 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 
 .resume-divider {
   width: calc(100% - 5.5rem);
-  height: 2px;
+  height: 1px;
   position: relative;
   right: calc(-1rem - 4px);
   background: var(--colG3);
@@ -878,7 +889,7 @@ li > span {
 888P     Y888 888   T88b 8888888     888     */
 
 .centered-title {
-  padding-bottom: 30px;
+  margin-bottom: 2rem;
   text-align: center;
   line-height: 2.5rem;
 }
@@ -936,30 +947,6 @@ span > em {
   margin-bottom: 1.5rem;
 }
 
-/*PHOTO
-8888888b.  888    888  .d88888b.  88888888888  .d88888b.  
-888   Y88b 888    888 d88P" "Y88b     888     d88P" "Y88b 
-888    888 888    888 888     888     888     888     888 
-888   d88P 8888888888 888     888     888     888     888 
-8888888P"  888    888 888     888     888     888     888 
-888        888    888 888     888     888     888     888 
-888        888    888 Y88b. .d88P     888     Y88b. .d88P 
-888        888    888  "Y88888P"      888      "Y88888P"  */
-
-.headshot-wrapper {
-  object-fit: contain;
-}
-
-.headshot {
-  float: right;
-  height: 400px;
-  /* width: 1fr; */
-}
-
-.headshot-hex {
-  height: 200px;
-}
-
 /*PARTNER LOGOS
 888       .d88888b.   .d8888b.   .d88888b.  
 888      d88P" "Y88b d88P  Y88b d88P" "Y88b 
@@ -978,7 +965,8 @@ span > em {
   justify-items: center;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .logo-grid > img {
@@ -1156,9 +1144,20 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 800px) {
+  .content-text-box-left-home {
+    display: none;
+  }
+  .content-text-box-right-home {
+    width: 100%;
+  }
+  .content-text-box-right-home > * {
+    margin-left: 1.5rem;
+  }
+
   .theme-switch-label {
     display: none;
   }
+
   .content-text-box-left,
   .content-text-box-right {
     width: 100%;
@@ -1166,6 +1165,16 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 600px) {
+  .content-text-box-left-home {
+    display: none;
+  }
+  .content-text-box-right-home {
+    width: 100%;
+  }
+  .content-text-box-right-home > * {
+    margin-left: 1.5rem;
+  }
+
   .content-text-box-left,
   .content-text-box-right {
     width: 100%;
