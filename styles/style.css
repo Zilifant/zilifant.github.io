@@ -920,12 +920,16 @@ li > span {
   text-align: center;
   line-height: 2.5rem;
   margin-bottom: 0;
+  font-family: 'Jura', sans-serif;
+  font-weight: 600;
+  color: var(--text-alt-title);
 }
 
 .centered-subtitle {
   text-align: center;
   margin-top: .25rem;
   margin-bottom: 2rem;
+  font-size: 17px;
 }
 
 .p1 > span,
@@ -954,7 +958,7 @@ span > em {
 }
 
 .p2 > span {
-  font-size: 17px;
+  font-size: .75rem;
   font-family: 'Courier Prime', monospace;
   line-height: 1rem;
   color: var(--text-alt-bright);
