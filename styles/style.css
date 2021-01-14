@@ -235,29 +235,31 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
 
 :root[light-dark-colors="light"] .light-hidden {display: none;}
 :root[light-dark-colors="light"] {
+  --bg: var(--colG2);
   --text: var(--truG6);
   --text-alt-faded: var(--colG4);
   --text-alt-bright: var(--indi5);
   --text-alt-title: var(--truG9);
-  --bg: var(--white);
-  --bg-img: none
-  --bg-img-size: 0;
+  --text-hover: var(--truG6);
+  --content-bg-img: none;
+  --content-bg-img-size: 0;
+  --content-bg: var(--white);
   --header-text: var(--colG2);
   --header-bg: var(--truG9);
   --nav-text: var(--truG9);
   --nav-bg: var(--colG2);
+  --nav-border: var(--colG3);
   --mob-nav-button-text: var(--colG2);
   --mob-nav-button-bg: var(--truG9);
   --mob-nav-button-bg-hover: var(--colG3);
   --social-media-icon-bg-hover: var(--accent);
   --social-media-icon-bg: var(--colG5);
   --footer-text: var(--colG5);
-  --footer-bg: var(--colG3);
+  --footer-bg: var(--colG2);
+  --footer-border: var(--colG3);
   --button-text: var(--colG2);
-  --button-bg: var(--fuch4);
-  --button-bg-hover: var(--fuch5);
-  --light-dark-colors-button-bg: var(--colG8);
-  --light-dark-colors-button-bg-hover: var(--colG7);
+  --button-bg: var(--fuch5);
+  --button-bg-hover: var(--fuch4);
   --form-bg: var(--colG3);
   --form-bg-focus: var(--colG2);
   --form-text: var(--gray8);
@@ -270,40 +272,42 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --accent-contact: var(--emer5);
   --light-dark-text-weight-adjust: 400;
   --light-dark-nav-text-weight-adjust: 450;
-  --coll-icon-border-fix: var(--bg);
+  --coll-icon-border-fix: var(--content-bg);
 }
 
 :root[light-dark-colors="dark"] .dark-hidden {display: none;}
 :root[light-dark-colors="dark"] {
+  --bg: var(--gray9);
   --text: var(--colG3);
   --text-alt-faded: var(--colG4);
   --text-alt-bright: var(--liBl3);
   --text-alt-title: var(--colG2);
-  --bg: var(--gray9);
-  --bg-img: url("../assets/backgrounds/dflowers-clear-1280.png");
-  --bg-img-size: 1280px;
+  --text-hover: var(--colG1);
+  --content-bg-img: url("../assets/backgrounds/dflowers-clear-1280.png");
+  --content-bg-img-size: 1280px;
+  --content-bg: none;
   --header-text: var(--colG2);
   --header-bg: var(--truG9);
   --nav-text: var(--colG2);
   --nav-bg: var(--gray8);
+  --nav-border: var(--gray7);
   --mob-nav-button-text: var(--colG2);
   --mob-nav-button-bg: var(--truG9);
   --mob-nav-button-bg-hover: var(--bg);
   --social-media-icon-bg-hover: var(--accent);
-  --social-media-icon-bg: var(--gray8);
-  --footer-text: var(--gray7);
+  --social-media-icon-bg: var(--gray7);
+  --footer-text: var(--gray6);
   --footer-bg: var(--gray9);
+  --footer-border: var(--gray7);
   --button-text: var(--colG2);
   --button-bg: var(--cyan6);
   --button-bg-hover: var(--cyan5);
-  --light-dark-colors-button-bg: var(--cyan6);
-  --light-dark-colors-button-bg-hover: var(--cyan5);
   --form-bg: var(--gray8);
   --form-bg-focus: var(--gray9);
   --form-text: var(--colG4);
   --form-text-placeholder: var(--colG5);
   --partner-logo-bg: var(--colG2);
-  --divider: var(--cyan5);
+  --divider: var(--gray7);
   --accent-home: var(--pink5);
   --accent-resume: var(--cyan6);
   --accent-writing: var(--oran5);
@@ -315,27 +319,35 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
 
 :root[light-dark-colors="light"]#home-page {
   --accent: var(--pink4);
+  --accent-hover: var(--pink4);
 }
 :root[light-dark-colors="light"]#resume-page {
   --accent: var(--cyan5);
+  --accent-hover: var(--cyan3);
 }
 :root[light-dark-colors="light"]#writing-page {
   --accent: var(--oran4);
+  --accent-hover: var(--oran4);
 }
 :root[light-dark-colors="light"]#contact-page {
   --accent: var(--emer5);
+  --accent-hover: var(--emer5);
 }
 :root[light-dark-colors="dark"]#home-page {
   --accent: var(--pink5);
+  --accent-hover: var(--pink5);
 }
 :root[light-dark-colors="dark"]#resume-page {
   --accent: var(--cyan6);
+  --accent-hover: var(--cyan4);
 }
 :root[light-dark-colors="dark"]#writing-page {
   --accent: var(--oran5);
+  --accent-hover: var(--oran5);
 }
 :root[light-dark-colors="dark"]#contact-page {
   --accent: var(--emer6);
+  --accent-hover: var(--emer6);
 }
 
 :root {
@@ -449,7 +461,7 @@ Y88b  d88P 888  T88b    888   888  .d88P
 .main-head-left {grid-area: hdl;}
 .main-head-right {grid-area: hdr;}
 .main-nav {grid-area: nav;}
-.content-1-col {grid-area: cnt;}
+.content {grid-area: cnt;}
 .side-left {grid-area: sbl;}
 .side-right {grid-area: sbr;}
 .main-footer {grid-area: ftm;}
@@ -464,16 +476,11 @@ Y88b  d88P 888  T88b    888   888  .d88P
   "nav nav nav"
   "sbl cnt sbr"
   "ftl ftm ftr";
-  background-image: var(--bg-img);
+  background-image: var(--content-bg-img);
   background-position: left;
-  background-size: var(--bg-img-size);
+  background-size: var(--content-bg-img-size);
   background-repeat: repeat;
   background-attachment: fixed;
-}
-
-.side-right,
-.side-left {
-  background: none;
 }
 
 /* HEAD
@@ -493,13 +500,14 @@ Y88b  d88P 888  T88b    888   888  .d88P
   width: 100vw;
   background: rgb(8,145,178);
   background: linear-gradient(135deg, rgba(8,145,178,1) 0%, rgba(0,212,255,1) 100%);
-}
+  background: linear-gradient(135deg, rgb(29, 32, 32) 0%, rgb(88, 88, 88) 100%);
+} */
 
 .main-head,
 .main-head-left,
 .main-head-right {
   background: none;
-} */
+}
 
 .main-head {
   display: flex;
@@ -538,7 +546,7 @@ nav {
 .main-nav {
   background: var(--nav-bg);
   align-items: center;
-  border-bottom: 1px solid var(--divider);
+  border-bottom: 1px solid var(--nav-border);
 }
 
 .main-nav-item {
@@ -624,7 +632,7 @@ nav {
 .main-footer-left,
 .main-footer-right {
   background: var(--footer-bg);
-  border-top: 1px solid var(--colG1);
+  border-top: 1px solid var(--footer-border);
 }
 
 .main-footer-item {
@@ -696,10 +704,18 @@ d88P  Y88b d88P" "Y88b 8888b   888
 Y88b  d88P Y88b. .d88P 888   Y8888 
  "Y8888P"   "Y88888P"  888    Y888 */
 
-.content-1-col {
+.content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.content,
+.side-right,
+.side-left {
+  background: var(--content-bg);
 }
 
 .content-text-box > * {
@@ -718,17 +734,6 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 .content-text-box-left-home > * {margin-right: 1rem;}
 .content-text-box-right-home {width: 70%;}
 .content-text-box-right-home > * {margin-left: 1rem;}
-
-.content-1-col,
-.content-left,
-.content-right,
-.content-resume-left,
-.content-resume-right {
-  /* background: var(--gray7); */
-  background: none;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
 
 /*PHOTO
 8888888b.  888    888  .d88888b.  88888888888  .d88888b.  
@@ -772,14 +777,13 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 }
 
 .collapsible-header:hover .ci-wrapper > .collapsible-icon {
-  background: var(--cyan4);
+  background: var(--accent-hover);
   /* border: 1px solid var(--cyan4); */
 }
 
-/* .collapsible-header:hover h5 {
-  color: var(--cyan5);
-  transition: .2s;
-} */
+.collapsible-header:hover h5 {
+  color: var(--text-hover);
+}
 
 .ci-wrapper {
   margin-right: 0;
@@ -794,9 +798,23 @@ Y88b  d88P Y88b. .d88P 888   Y8888
   width: 1.5rem;
   /* border: 1px solid var(--cyan5); */
   clip-path: polygon(40% 0, 60% 0, 60% 40%, 100% 40%, 100% 60%, 60% 60%, 60% 100%, 40% 100%, 40% 60%, 0 60%, 0 40%, 40% 40%);
-  background: var(--cyan5);
+  background: var(--accent);
   position: relative;
 }
+
+/* .collapsible-icon::before {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  content: "";
+  height: 22px;
+  width: 22px;
+  border: 2px solid var(--coll-icon-border-fix);
+  z-index: 1;
+} */
 
 .coll-icon-bg {
   -moz-box-sizing: content-box;
@@ -819,7 +837,7 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 }
 
 .rotated:hover .ci-wrapper > .collapsible-icon {
-  background: var(--cyan4);
+  background: var(--accent-hover);
 }
 
 .coll-header-text {
@@ -872,7 +890,7 @@ li {
 
 li::before {
   content: "▸";
-  color: var(--text-alt-faded);
+  color: var(--accent);
   position: relative;
   left: -10px;
 }
@@ -892,9 +910,15 @@ li > span {
 888P     Y888 888   T88b 8888888     888     */
 
 .centered-title {
-  margin-bottom: 2rem;
   text-align: center;
   line-height: 2.5rem;
+  margin-bottom: 0;
+}
+
+.centered-subtitle {
+  text-align: center;
+  margin-top: .25rem;
+  margin-bottom: 2rem;
 }
 
 .p1 > span,
@@ -1106,7 +1130,7 @@ Y88b  d88P 8888P   Y8888   888       888
   right: 25px;
   bottom: 5px;
   border-radius: 50%;
-  background-color: var(--colG1);
+  background-color: var(--white);
   box-shadow: 0 0 3px .25px var(--colG4);
   -webkit-transition: .2s;
   transition: .2s;
