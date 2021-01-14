@@ -22,6 +22,8 @@ if (currentTheme) {
   if (currentTheme === 'dark') {
     toggleSwitch.checked = true;
     imgsToDarkMode();
+  } else {
+    imgsToLightode();
   }
 }
 
@@ -30,13 +32,19 @@ function imgsToDarkMode() {
   for (let i = 0; i < imglist.length; i++) {
     imglist[i].setAttribute('src', `../assets/partner-logos/${imglist[i].id}-light.png`);
   }
+  if (document.getElementById("headshot")) {
+    document.getElementById("headshot").setAttribute('src', '../assets/images/headshot-dark.png');
+  };
 }
 
 function imgsToLightode() {
   let imglist = document.getElementsByClassName("light-dark-img");
   for (let i = 0; i < imglist.length; i++) {
     imglist[i].setAttribute('src', `../assets/partner-logos/${imglist[i].id}-color.png`);
-  }
+  };
+  if (document.getElementById("headshot")) {
+    document.getElementById("headshot").setAttribute('src', '../assets/images/headshot.jpg');
+  };
 }
 
 function switchTheme(e) {
@@ -92,7 +100,6 @@ let i;
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
-    console.log("active");
     this.classList.toggle("active");
     this.classList.toggle("rotated");
     let content = this.nextElementSibling;
