@@ -209,7 +209,7 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --gray5: RGBA(113,113,122,1);
   --gray6: RGBA(82,82,91,1);
   --gray7: RGBA(63,63,70,1);
-  --gray8: RGBA(39,39,42,1);
+  --gray8: RGBA(39,39,42,1); --gray8o50: RGBA(39,39,42,.5);
   --gray9: RGBA(24,24,27,1);
   --colG0: RGBA(249,250,251,1);
   --colG1: RGBA(243,244,246,1);
@@ -285,7 +285,7 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --content-bg-img-size: 1280px;
   --content-bg: none;
   --header-text: var(--colG2);
-  --header-bg: var(--truG9);
+  --header-bg: var(--gray9);
   --nav-text: var(--colG2);
   --nav-bg: var(--gray8);
   --nav-border: var(--gray7);
@@ -568,11 +568,11 @@ nav {
 
 .main-nav-item:hover,
 .dropdown-nav-item:hover {
-  background-position: 0 -25%;
+  background-position: 0 -100%;
 }
 
 .this-page {
-  background-position: 0 -25%;
+  background-position: 0 -100%;
 }
 
 #home {
@@ -580,20 +580,16 @@ nav {
     var(--nav-bg) 50%, var(--accent-home) 50%
   );
 }
-
 #resume {
   background-image: linear-gradient(to bottom, 
     var(--nav-bg) 50%, var(--accent-resume) 50%
   );
 }
-
 #writing {
   background-image: linear-gradient(to bottom, 
     var(--nav-bg) 50%, var(--accent-writing) 50%
   );
-
 }
-
 #contact {
   background-image: linear-gradient(to bottom, 
     var(--nav-bg) 50%, var(--accent-contact) 50%
@@ -916,6 +912,14 @@ li > span {
 8888P   Y8888 888  T88b    888       888     
 888P     Y888 888   T88b 8888888     888     */
 
+#closed-system-title {
+  width: 20rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+}
+
 .centered-title {
   text-align: center;
   line-height: 2.5rem;
@@ -927,7 +931,7 @@ li > span {
 
 .centered-subtitle {
   text-align: center;
-  margin-top: .25rem;
+  margin-top: 0;
   margin-bottom: 2rem;
   font-size: 17px;
 }

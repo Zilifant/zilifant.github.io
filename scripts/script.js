@@ -35,6 +35,9 @@ function imgsToDarkMode() {
   if (document.getElementById("headshot")) {
     document.getElementById("headshot").setAttribute('src', '../assets/images/headshot-dark.png');
   };
+  if (document.getElementById("closed-system-title")) {
+    document.getElementById("closed-system-title").setAttribute('src', '../assets/icons/closed-system-title-dark.svg');
+  };
 }
 
 function imgsToLightode() {
@@ -44,6 +47,9 @@ function imgsToLightode() {
   };
   if (document.getElementById("headshot")) {
     document.getElementById("headshot").setAttribute('src', '../assets/images/headshot.jpg');
+  };
+  if (document.getElementById("closed-system-title")) {
+    document.getElementById("closed-system-title").setAttribute('src', '../assets/icons/closed-system-title-light.svg');
   };
 }
 
