@@ -246,6 +246,8 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --content-bg: var(--white);
   --header-text: var(--colG2);
   --header-bg: var(--truG9);
+  --header-bg-img: url("../assets/backgrounds/dflowers-clear-1280.png");
+  --header-bg-img-size: 1280px;
   --nav-text: var(--truG9);
   --nav-bg: var(--colG2);
   --nav-border: var(--colG3);
@@ -286,6 +288,8 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --content-bg: none;
   --header-text: var(--colG2);
   --header-bg: var(--gray9);
+  --header-bg-img: none;
+  --header-bg-img-size: 0;
   --nav-text: var(--colG2);
   --nav-bg: var(--gray8);
   --nav-border: var(--gray7);
@@ -409,7 +413,6 @@ p, ul, ol, li, li > span {
 }
 
 .upcase {
-  /* font-family: 'Roboto Condensed', sans-serif; */
   text-transform: uppercase;
   letter-spacing: .1rem;
 }
@@ -489,15 +492,19 @@ Y88b  d88P 888  T88b    888   888  .d88P
 888    888 888         d8888888888 888  .d88P 
 888    888 8888888888 d88P     888 8888888P"  */
 
-/* .main-head-full-width-bg {
+.main-head-full-width-bg {
   position: absolute;
   z-index: 0;
   height: 100%;
   width: 100vw;
-  background: rgb(8,145,178);
+  /* background: rgb(8,145,178);
   background: linear-gradient(135deg, rgba(8,145,178,1) 0%, rgba(0,212,255,1) 100%);
-  background: linear-gradient(135deg, rgb(29, 32, 32) 0%, rgb(88, 88, 88) 100%);
-} */
+  background: linear-gradient(135deg, rgb(29, 32, 32) 0%, rgb(88, 88, 88) 100%); */
+  background-image: var(--header-bg-img);
+  background-position: left;
+  background-size: var(--header-bg-img-size);
+  background-repeat: repeat;
+}
 
 .main-head,
 .main-head-left,
@@ -669,7 +676,6 @@ nav {
   height: 35px;
   width: 35px;
   background: var(--social-media-icon-bg);
-  /* border: 3px solid var(--liBl6); */
   border-radius: 50%;
   margin-left: .5rem;
   margin-right: .5rem;
@@ -683,7 +689,6 @@ nav {
 
 .social-media-icon:hover {
   background: var(--social-media-icon-bg-hover);
-  /* border: 3px solid var(--accent); */
 }
 
 /* CONTENT
@@ -739,7 +744,6 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 
 .headshot-wrapper {
   object-fit: contain;
-  /* background: var(--colG5); */
 }
 
 .headshot-wrapper > img {
