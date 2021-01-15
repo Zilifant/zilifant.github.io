@@ -250,12 +250,13 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --header-bg-img-size: 1280px;
   --nav-text: var(--truG9);
   --nav-bg: var(--colG2);
+  --nav-bg-this-page: var(--colG3);
   --nav-border: var(--colG3);
   --mob-nav-button-text: var(--colG2);
   --mob-nav-button-bg: var(--truG9);
   --mob-nav-button-bg-hover: var(--colG3);
   --social-media-icon-bg-hover: var(--accent);
-  --social-media-icon-bg: var(--colG5);
+  --social-media-icon-bg: var(--colG4);
   --footer-text: var(--colG5);
   --footer-bg: var(--colG2);
   --footer-border: var(--colG3);
@@ -292,6 +293,7 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --header-bg-img-size: 0;
   --nav-text: var(--colG2);
   --nav-bg: var(--gray8);
+  --nav-bg-this-page: var(--gray7);
   --nav-border: var(--gray7);
   --mob-nav-button-text: var(--colG2);
   --mob-nav-button-bg: var(--truG9);
@@ -351,7 +353,7 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
 }
 
 :root {
-  --rad: 2px;
+  --rad: 3px;
 }
 
 /* RESET
@@ -364,16 +366,13 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
 888  T88b  888        Y88b  d88P 888            888     
 888   T88b 8888888888  "Y8888P"  8888888888     888     */
 
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   background: var(--bg);
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   font-family: 'Rubik', sans-serif;
   font-size: 16px;
   color: var(--text);
@@ -386,7 +385,7 @@ body {
 
 h1,h2,h3,h4,h5,h6,li,ol,p,ul{font-style:normal;text-decoration:none}h1,h2,h3,h4,h5,h6{font-weight:400}h1{font-size:2.5rem}h2{font-size:2.25rem}h3{font-size:2rem}h4{font-size:1.75rem}h5{font-size:1.5rem}h6{font-size:1.25rem}
 
-p, ul, ol, li, li > span {
+p, ul, ol, li {
   font-size: 17px;
   line-height: 1.75rem;
   font-weight: var(--light-dark-text-weight-adjust);
@@ -396,11 +395,6 @@ p, ul, ol, li, li > span {
 /* a {
   letter-spacing: .05rem;
 } */
-
-.p-plus > span {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
 
 .center {
   display: flex;
@@ -497,9 +491,6 @@ Y88b  d88P 888  T88b    888   888  .d88P
   z-index: 0;
   height: 100%;
   width: 100vw;
-  /* background: rgb(8,145,178);
-  background: linear-gradient(135deg, rgba(8,145,178,1) 0%, rgba(0,212,255,1) 100%);
-  background: linear-gradient(135deg, rgb(29, 32, 32) 0%, rgb(88, 88, 88) 100%); */
   background-image: var(--header-bg-img);
   background-position: left;
   background-size: var(--header-bg-img-size);
@@ -527,7 +518,12 @@ Y88b  d88P 888  T88b    888   888  .d88P
 }
 
 .main-head-item {
-  color: var(--header-text);
+  /* color: var(--header-text); */
+  background: -webkit-linear-gradient(var(--header-text), var(--colG3));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   z-index: 0;
 }
 
@@ -556,7 +552,6 @@ nav {
   display: block;
   color: var(--nav-text);
   padding: .75rem .5625rem;
-  margin: 0 .1875rem;
   text-decoration: none;
   font-size: 1.25rem;
   text-transform: uppercase;
@@ -567,39 +562,63 @@ nav {
 .main-nav-item,
 .dropdown-nav-item {
   background-size: 100% 200%;
-  background-image: linear-gradient(to bottom, 
-    var(--nav-bg) 50%, var(--accent) 50%
-  );
-  transition: background-position .125s;
+  transition: .15s ease-in-out;
 }
 
 .main-nav-item:hover,
 .dropdown-nav-item:hover {
   background-position: 0 -100%;
+  color: var(--header-text);
+  font-weight: var(--light-dark-title-text-weight-adjust);
 }
 
-.this-page {
+/* .this-page {
+  background: var(--colG3) !important;
+  color: var(--nav-text) !important;
+  color: var(--header-text);
   background-position: 0 -100%;
-}
+  font-weight: var(--light-dark-title-text-weight-adjust);
+} */
 
-#home {
+.pa-home {
   background-image: linear-gradient(to bottom, 
     var(--nav-bg) 50%, var(--accent-home) 50%
   );
 }
-#resume {
+.pa-resume {
   background-image: linear-gradient(to bottom, 
     var(--nav-bg) 50%, var(--accent-resume) 50%
   );
 }
-#writing {
+.pa-writing {
   background-image: linear-gradient(to bottom, 
     var(--nav-bg) 50%, var(--accent-writing) 50%
   );
 }
-#contact {
+.pa-contact {
   background-image: linear-gradient(to bottom, 
-    var(--nav-bg) 50%, var(--accent-contact) 50%
+  var(--nav-bg) 50%, var(--accent-contact) 50%
+  );
+}
+
+#this-page-home {
+  background-image: linear-gradient(to bottom, 
+    var(--nav-bg-this-page) 50%, var(--accent-home) 50%
+  );
+}
+#this-page-resume {
+  background-image: linear-gradient(to bottom, 
+    var(--nav-bg-this-page) 50%, var(--accent-resume) 50%
+  );
+}
+#this-page-writing {
+  background-image: linear-gradient(to bottom, 
+    var(--nav-bg-this-page) 50%, var(--accent-writing) 50%
+  );
+}
+#this-page-contact {
+  background-image: linear-gradient(to bottom, 
+    var(--nav-bg-this-page) 50%, var(--accent-contact) 50%
   );
 }
 
@@ -676,7 +695,8 @@ nav {
   height: 35px;
   width: 35px;
   background: var(--social-media-icon-bg);
-  border-radius: 50%;
+  border-radius: var(--rad);
+  /* border: 2px solid var(--social-media-icon-bg); */
   margin-left: .5rem;
   margin-right: .5rem;
 }
@@ -684,11 +704,12 @@ nav {
 .social-media-icon > img {
   display: block;
   margin: auto;
-  width: 60%;
+  height: 66%;
 }
 
 .social-media-icon:hover {
   background: var(--social-media-icon-bg-hover);
+  /* border: 2px solid var(--social-media-icon-bg-hover); */
 }
 
 /* CONTENT
@@ -902,7 +923,7 @@ li::before {
   left: -10px;
 }
 
-li > span {
+li {
   color: var(--text);
 }
 
@@ -922,6 +943,8 @@ li > span {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0;
+  border-radius: var(--rad);
+  overflow: hidden;
 }
 
 .centered-title {
@@ -940,58 +963,30 @@ li > span {
   font-size: 17px;
 }
 
-.p1 > span,
-span > em,
-.ping-span {
+.p1, .p2, .p1 > em, .p2 > em {
   font-size: 17px;
   font-weight: var(--light-dark-text-weight-adjust);
   line-height: 1.75rem;
 }
 
-.p1 > span,
-span > em {
+.p1, .p1 > em {
   color: var(--text);
 }
 
-.ping-p > span,
-.ping-span {
+.p2 {
   color: var(--text-alt-faded);
 }
 
-.p2 {
+.p3 {
   margin-top: 0;
   margin-left: 3rem;
   margin-right: 2.5rem;
   margin-bottom: .5rem;
   line-height: 1rem;
-}
-
-.p2 > span {
   font-size: 1rem;
   font-family: monospace;
   font-weight: normal;
   color: var(--cyan5);
-}
-
-.bar-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.bar {
-  width: 150px;
-  margin-top: .5rem;
-  margin-bottom: .5rem;
-}
-
-.bar-circle {
-  height: 10px;
-  width: 10px;
-  border-radius: 50%;
-  background: var(--text-alt-faded);
-  margin: 0 10px;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
 }
 
 /*PARTNER LOGOS
@@ -1110,7 +1105,7 @@ Y88b  d88P 8888P   Y8888   888       888
 .theme-switch-label {
   position: absolute;
   left: 635px;
-  color: var(--header-text);
+  font-weight: 450;
   font-size: 1rem;
   text-justify: left;
 }
@@ -1121,7 +1116,7 @@ Y88b  d88P 8888P   Y8888   888       888
   width: 50px;
   height: 30px;
   margin-right: 1.5rem;
-  border-radius: 15px;
+  border-radius: var(--rad);
   overflow: hidden;
 }
 
@@ -1149,7 +1144,7 @@ Y88b  d88P 8888P   Y8888   888       888
   width: 20px;
   right: 25px;
   bottom: 5px;
-  border-radius: 50%;
+  border-radius: var(--rad);
   background-color: var(--white);
   box-shadow: 0 0 3px .25px var(--colG4);
   -webkit-transition: .2s;
