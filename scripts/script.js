@@ -13,17 +13,17 @@ document.addEventListener("DOMContentLoaded", function() {
   }, 1000)
 })
 
-const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+const toggleSwitch = document.querySelector('.theme-switch-bg input[type="checkbox"]');
 
 const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 
 if (currentTheme) {
-  document.documentElement.setAttribute('light-dark-colors', currentTheme);
+  document.documentElement.setAttribute('current-theme', currentTheme);
   if (currentTheme === 'dark') {
     toggleSwitch.checked = true;
     imgsToDarkMode();
   } else {
-    imgsToLightode();
+    imgsToLightMode();
   }
 }
 
@@ -35,12 +35,12 @@ function imgsToDarkMode() {
   if (document.getElementById("headshot")) {
     document.getElementById("headshot").setAttribute('src', '../assets/images/headshot-dark.png');
   };
-  if (document.getElementById("closed-system-title")) {
-    document.getElementById("closed-system-title").setAttribute('src', '../assets/icons/closed-system-title-dark.svg');
+  if (document.getElementById("closed-system-title-img")) {
+    document.getElementById("closed-system-title-img").setAttribute('src', '../assets/icons/closed-system-title-dark.svg');
   };
 }
 
-function imgsToLightode() {
+function imgsToLightMode() {
   let imglist = document.getElementsByClassName("light-dark-img");
   for (let i = 0; i < imglist.length; i++) {
     imglist[i].setAttribute('src', `../assets/partner-logos/${imglist[i].id}-color.png`);
@@ -48,20 +48,20 @@ function imgsToLightode() {
   if (document.getElementById("headshot")) {
     document.getElementById("headshot").setAttribute('src', '../assets/images/headshot.jpg');
   };
-  if (document.getElementById("closed-system-title")) {
-    document.getElementById("closed-system-title").setAttribute('src', '../assets/icons/closed-system-title-light.svg');
+  if (document.getElementById("closed-system-title-img")) {
+    document.getElementById("closed-system-title-img").setAttribute('src', '../assets/icons/closed-system-title-light.svg');
   };
 }
 
 function switchTheme(e) {
   if (e.target.checked) {
-    document.documentElement.setAttribute('light-dark-colors', 'dark');
+    document.documentElement.setAttribute('current-theme', 'dark');
     localStorage.setItem('theme', 'dark');
     imgsToDarkMode();
   } else {
-    document.documentElement.setAttribute('light-dark-colors', 'light');
+    document.documentElement.setAttribute('current-theme', 'light');
     localStorage.setItem('theme', 'light');
-    imgsToLightode();
+    imgsToLightMode();
   }
 }
 
@@ -94,7 +94,7 @@ toggleSwitch.addEventListener('change', switchTheme, false);
     '<a href="https://en.wikiquote.org/wiki/Johann_Wolfgang_von_Goethe">That which you inherit from your fathers, you must earn in order to possess.</a>'
   ];
   let randomQuote = Math.floor(Math.random() * quotes.length);
-  document.getElementById("quoteDisplay").innerHTML = quotes[randomQuote];
+  document.getElementById("foot-quote-display").innerHTML = quotes[randomQuote];
 })();
 
 /*-------------------*/
@@ -201,24 +201,24 @@ btn.addEventListener("click", function() {
 /*-----------------------------*/
 
 // if (
-//   localStorage.getItem('light-dark-colors') === 'dark' ||
+//   localStorage.getItem('current-theme') === 'dark' ||
 //   (window.matchMedia('(prefers-color-scheme: dark)').matches &&
 //   !localStorage.getItem('color-mode'))
 // ) {
-//   document.documentElement.setAttribute('light-dark-colors', 'dark')
+//   document.documentElement.setAttribute('current-theme', 'dark')
 // }
 
 // const toggleColorMode = e => {
 //   if (e.currentTarget.classList.contains("light-hidden")) {
-//     document.documentElement.setAttribute("light-dark-colors", "light");
-//     localStorage.setItem("light-dark-colors", "light");
+//     document.documentElement.setAttribute("current-theme", "light");
+//     localStorage.setItem("current-theme", "light");
 //     return;
 //   }
-//   document.documentElement.setAttribute("light-dark-colors", "dark");
-//   localStorage.setItem("light-dark-colors", "dark");
+//   document.documentElement.setAttribute("current-theme", "dark");
+//   localStorage.setItem("current-theme", "dark");
 // };
 
-// const toggleColorButtons = document.querySelectorAll(".light-dark-colors-btn");
+// const toggleColorButtons = document.querySelectorAll(".current-theme-btn");
 
 // toggleColorButtons.forEach(btn => {
 //   btn.addEventListener("click", toggleColorMode);
