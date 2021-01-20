@@ -233,7 +233,9 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --bluG9: RGBA(15,23,42,1);
 }
 
-:root[current-theme="light"] .light-hidden {display: none;}
+:root { --rad: 3px; }
+
+:root[current-theme="light"] .light-hidden { display: none; }
 :root[current-theme="light"] {
   --bg: var(--colG2);
   --text: var(--truG6);
@@ -276,7 +278,7 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --exl-btn-icon-border-fix: var(--content-bg);
 }
 
-:root[current-theme="dark"] .dark-hidden {display: none;}
+:root[current-theme="dark"] .dark-hidden { display: none; }
 :root[current-theme="dark"] {
   --bg: var(--gray9);
   --text: var(--colG3);
@@ -299,7 +301,7 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --drop-nav-btn-bg: var(--truG9);
   --drop-nav-btn-bg-hover: var(--bg);
   --foot-social-icon-bg-hover: var(--accent);
-  --foot-social-icon-bg: var(--gray7);
+  --foot-social-icon-bg: var(--gray8);
   --foot-text: var(--gray6);
   --foot-bg: var(--gray9);
   --foot-border: var(--gray7);
@@ -352,8 +354,6 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --accent-hover: var(--emer5);
 }
 
-:root { --rad: 3px; }
-
 /* RESET
 8888888b.  8888888888  .d8888b.  8888888888 88888888888 
 888   Y88b 888        d88P  Y88b 888            888     
@@ -363,15 +363,6 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
 888 T88b   888              "888 888            888     
 888  T88b  888        Y88b  d88P 888            888     
 888   T88b 8888888888  "Y8888P"  8888888888     888     */
-
-.preload,
-.preload:before {
-  -webkit-transition: none !important;
-     -moz-transition: none !important;
-      -ms-transition: none !important;
-       -o-transition: none !important;
-          transition: none !important;
-}
 
 html, body {
   margin: 0;
@@ -399,15 +390,29 @@ p, ul, ol, li {
   letter-spacing: .02rem;
 }
 
+/*MISC
+888b     d888 8888888  .d8888b.   .d8888b.  
+8888b   d8888   888   d88P  Y88b d88P  Y88b 
+88888b.d88888   888   Y88b.      888    888 
+888Y88888P888   888    "Y888b.   888        
+888 Y888P 888   888       "Y88b. 888        
+888  Y8P  888   888         "888 888    888 
+888   "   888   888   Y88b  d88P Y88b  d88P 
+888       888 8888888  "Y8888P"   "Y8888P"  */
+
+.preload,
+.preload:before {
+  -webkit-transition: none !important;
+     -moz-transition: none !important;
+      -ms-transition: none !important;
+       -o-transition: none !important;
+          transition: none !important;
+}
+
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.upcase {
-  text-transform: uppercase;
-  letter-spacing: .1rem;
 }
 
 .content-title {
@@ -443,16 +448,16 @@ d88P  Y88b 888   Y88b   888   888  "Y88b
 Y88b  d88P 888  T88b    888   888  .d88P 
  "Y8888P88 888   T88b 8888888 8888888P"  */
 
-.main-head {grid-area: hdm;}
-.main-head-left {grid-area: hdl;}
-.main-head-right {grid-area: hdr;}
-.main-nav {grid-area: nav;}
-.content {grid-area: cnt;}
-.side-left {grid-area: sbl;}
-.side-right {grid-area: sbr;}
-.foot {grid-area: ftm;}
-.foot-left {grid-area: ftl;}
-.foot-right {grid-area: ftr;}
+.main-head       { grid-area: hdm; }
+.main-head-left  { grid-area: hdl; }
+.main-head-right { grid-area: hdr; }
+.main-nav        { grid-area: nav; }
+.content-wrapper { grid-area: cnt; }
+.side-left       { grid-area: sbl; }
+.side-right      { grid-area: sbr; }
+.foot            { grid-area: ftm; }
+.foot-left       { grid-area: ftl; }
+.foot-right      { grid-area: ftr; }
 
 .wrapper {
   display: grid;
@@ -560,7 +565,8 @@ Y88b  d88P 8888P   Y8888   888       888
   bottom: 0;
   background-color: var(--colG3);
   -webkit-transition: .2s;
-  transition: .2s;
+     -moz-transition: .2s;
+          transition: .2s;
 }
 
 .theme-switch-slider:before {
@@ -574,7 +580,8 @@ Y88b  d88P 8888P   Y8888   888       888
   background-color: var(--white);
   box-shadow: 0 0 3px .25px var(--colG4);
   -webkit-transition: .2s;
-  transition: .2s;
+     -moz-transition: .2s;
+          transition: .2s;
 }
 
 input:checked + .theme-switch-slider { background-color: var(--colG3); }
@@ -658,7 +665,7 @@ input:checked + .theme-switch-slider:before {
 }
 .main-nav-item-contact {
   background-image: linear-gradient(to bottom,
-  var(--nav-bg) 50%, var(--accent-contact) 50%
+    var(--nav-bg) 50%, var(--accent-contact) 50%
   );
 }
 
@@ -799,18 +806,14 @@ input:checked + .theme-switch-slider:before {
   text-decoration: none;
 }
 
-.foot-item-left > a:hover {
-  color: var(--accent);
-}
+.foot-item-left > a:hover { color: var(--accent); }
 
 .foot-item-right {
   justify-self: right;
   text-align: right;
 }
 
-#copyright-1-line {
-  display: none;
-}
+#copyright-1-line { display: none; }
 
 .foot-social-icon {
   display: flex;
@@ -859,7 +862,7 @@ d88P  Y88b d88P" "Y88b 8888b   888
 Y88b  d88P Y88b. .d88P 888   Y8888 
  "Y8888P"   "Y88888P"  888    Y888 */
 
-.content {
+.content-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -867,11 +870,11 @@ Y88b  d88P Y88b. .d88P 888   Y8888
   padding-bottom: 1rem;
 }
 
-.content,
+.content-wrapper,
 .side-right,
 .side-left { background: var(--content-bg); }
 
-.content-text-box > * {
+.content > * {
   margin-top: 1rem;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -879,18 +882,15 @@ Y88b  d88P Y88b. .d88P 888   Y8888
   line-height: 1.75rem;
 }
 
-.content-text-box-full { width: 100%; }
-.content-text-box-left { width: 35%; }
-.content-text-box-right { width: 65%; }
-.content-text-box-left-home { width: 30%; }
-.content-text-box-left-home > * { margin-right: 1rem; }
-.content-text-box-right-home { width: 70%; }
-.content-text-box-right-home > * { margin-left: 1rem; }
+.content-30-left { width: 30%; }
+.content-30-left > * { margin-right: 1rem; }
+.content-70-right { width: 70%; }
+.content-70-right > * { margin-left: 1rem; }
 
 /* make 2-column pages into 1-column */
 @media (max-width: 800px) {
-  .content-text-box-left,
-  .content-text-box-right { width: 100%; }
+  .content-left-contact,
+  .content-right-contact { width: 100%; }
 }
 
 /*HOME
@@ -914,9 +914,9 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 
 /* hide headshot on HOME page */
 @media (max-width: 800px) {
-  .content-text-box-left-home { display: none; }
-  .content-text-box-right-home { width: 100%; }
-  .content-text-box-right-home > * { margin-left: 1.5rem; }
+  .content-left-home { display: none; }
+  .content-right-home { width: 100%; }
+  .content-right-home > * { margin-left: 1.5rem; }
 }
 
 .partner-logo-grid {
@@ -969,7 +969,6 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 .exl-btn-icon-fore {
   height: 1.25rem;
   width: 1.25rem;
-  /* border: 1px solid var(--cyan5); */
   clip-path: polygon(40% 0, 60% 0, 60% 40%, 100% 40%, 100% 60%, 60% 60%, 60% 100%, 40% 100%, 40% 60%, 0 60%, 0 40%, 40% 40%);
   background: var(--accent);
   position: relative;
@@ -989,9 +988,9 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 }
 
 .rotated .exl-btn-icon-wrap {
-          transform: rotate(135deg);
-     -moz-transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
+     -moz-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
 
 .rotated:hover .exl-btn-icon-wrap > .exl-btn-icon-fore { background: var(--accent-hover); }
@@ -1112,6 +1111,8 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 
 .contact-label { display: none; }
 
+textarea { height: 200px; }
+
 ::placeholder {
   color: var(--form-text-placeholder);
   text-transform: uppercase;
@@ -1130,10 +1131,8 @@ textarea {
   resize: none;
   color: var(--form-text);
   background-size: 200% 100%;
-  background-image: linear-gradient(
-    to left,
-      var(--form-bg-focus) 50%,
-      var(--form-bg) 50%
+  background-image: linear-gradient(to left,
+    var(--form-bg-focus) 50%, var(--form-bg) 50%
   );
   transition: background-position .25s;
 }
@@ -1147,34 +1146,24 @@ textarea:focus {
 
 input[type=text]:focus label,
 input[type=email]:focus label,
-textarea:focus label {
-  visibility: hidden;
-}
+textarea:focus label { visibility: hidden; }
 
 input[type=submit] {
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-color: var(--accent);
   color: var(--button-text);
-  padding: 9px 15px;
+  padding: .5rem 1rem;
   border: 3px solid var(--accent);
   margin-bottom: .5rem;
   border-radius: var(--rad);
   cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
 }
 
 input[type=submit]:hover {
   background-color: var(--accent-hover);
   border: 3px solid var(--accent-hover);
 }
-
-/*MISC
-888b     d888 8888888  .d8888b.   .d8888b.  
-8888b   d8888   888   d88P  Y88b d88P  Y88b 
-88888b.d88888   888   Y88b.      888    888 
-888Y88888P888   888    "Y888b.   888        
-888 Y888P 888   888       "Y88b. 888        
-888  Y8P  888   888         "888 888    888 
-888   "   888   888   Y88b  d88P Y88b  d88P 
-888       888 8888888  "Y8888P"   "Y8888P"  */
