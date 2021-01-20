@@ -101,7 +101,7 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 /*Collapsible Lists--*/
 /*-------------------*/
 
-let coll = document.getElementsByClassName("collapsible-header");
+let coll = document.getElementsByClassName("exl-btn");
 let i;
 
 for (i = 0; i < coll.length; i++) {
