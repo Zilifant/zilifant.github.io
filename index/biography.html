@@ -4,7 +4,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,350;0,400;0,450;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<html lang="en" dir="ltr" light-dark-colors="light" id="home-page">
+<html lang="en" dir="ltr" current-theme="light" id="page-home">
 
 <head>
   <meta charset="utf-8">
@@ -18,35 +18,35 @@
 <div class="wrapper">
 
   <header class="main-head">
-    <div class="main-head-full-width-bg"></div>
-    <h4 class="main-head-item upcase">Scott Silsbe</h4>
-    <div class="upcase main-head-item theme-switch-label light-hidden">Go Light</div>
-    <div class="upcase main-head-item theme-switch-label dark-hidden">Go Dark</div>
-    <label class="theme-switch main-head-item">
-      <input type="checkbox" id="slide">
-      <span class="slider preload"></span>
+    <div class="main-head-bg"></div>
+    <h4 class="main-head-item main-head-item-title">Scott Silsbe</h4>
+    <div class="main-head-item theme-switch-text light-hidden">Go Light</div>
+    <div class="main-head-item theme-switch-text dark-hidden">Go Dark</div>
+    <label class="main-head-item theme-switch-bg">
+      <input type="checkbox">
+      <span class="theme-switch-slider"></span>
     </label>
   </header>
 
-  <nav id="nav-home" class="main-nav">
-    <a id="this-page-home" class="pa-home main-nav-item preload" href="../index/biography.html">Home</a>
-    <a class="pa-resume main-nav-item" href="../index/resume.html">Resume</a>
-    <a class="pa-writing main-nav-item" href="../index/writing.html">Writing</a>
-    <a class="pa-contact main-nav-item" href="../index/contact.html">Contact</a>
-    <div class="dropdown">
-      <button class="mobile-nav-button">
-        <div class="dropdown-icon">
-          <div class="dropdown-icon-bar"></div>
-          <div class="dropdown-icon-bar"></div>
-          <div class="dropdown-icon-bar"></div>
+  <nav class="main-nav">
+    <a class="main-nav-item main-nav-item-home this-page-main preload" href="../index/biography.html">Home</a>
+    <a class="main-nav-item main-nav-item-resume" href="../index/resume.html">Resume</a>
+    <a class="main-nav-item main-nav-item-writing" href="../index/writing.html">Writing</a>
+    <a class="main-nav-item main-nav-item-contact" href="../index/contact.html">Contact</a>
+    <div class="drop-nav">
+      <button class="drop-nav-btn">
+        <div class="drop-nav-btn-icon">
+          <div class="drop-nav-btn-icon-bar"></div>
+          <div class="drop-nav-btn-icon-bar"></div>
+          <div class="drop-nav-btn-icon-bar"></div>
         </div>
         <div>Scott Silsbe</div>
       </button>
-      <div class="dropdown-content">
-        <a class="dropdown-nav-item this-page" href="../index/biography.html"><div>Home</div></a>
-        <a class="dropdown-nav-item" href="../index/resume.html"><div>Resume</div></a>
-        <a class="dropdown-nav-item" href="../index/writing.html"><div>Writing</div></a>
-        <a class="dropdown-nav-item" href="../index/contact.html"><div>Contact</div></a>
+      <div class="drop-nav-items">
+        <a class="drop-nav-items-item this-page-drop" href="../index/biography.html"><div>Home</div></a>
+        <a class="drop-nav-items-item" href="../index/resume.html"><div>Resume</div></a>
+        <a class="drop-nav-items-item" href="../index/writing.html"><div>Writing</div></a>
+        <a class="drop-nav-items-item" href="../index/contact.html"><div>Contact</div></a>
       </div>
     </div>
   </nav>
@@ -94,18 +94,18 @@
   <div class="main-head-right"></div>
   <div class="side-right"></div>
   <div class="side-left"></div>
-  <div class="main-footer-left"></div>
-  <div class="main-footer-right"></div>
+  <div class="foot-left"></div>
+  <div class="foot-right"></div>
 
-  <footer class="main-footer">
-    <p class="main-footer-item footer-item-left" id="quoteDisplay"></p>
-    <div class="main-footer-item footer-item-center">
-      <a href="url" class="social-media-icon"><img src="../assets/icons/email-logo-light.svg"></a>
-      <a href="url" class="social-media-icon"><img src="../assets/icons/linkedin-logo-light.svg"></a>
-      <a href="url" class="social-media-icon"><img src="../assets/icons/twitter-logo-light.svg"></a>
+  <footer class="foot">
+    <p class="foot-item foot-item-left" id="foot-quote-display"></p>
+    <div class="foot-item foot-item-center">
+      <a href="url" class="foot-social-icon"><img src="../assets/icons/email-logo-light.svg"></a>
+      <a href="url" class="foot-social-icon"><img src="../assets/icons/linkedin-logo-light.svg"></a>
+      <a href="url" class="foot-social-icon"><img src="../assets/icons/twitter-logo-light.svg"></a>
     </div>
-    <p class="main-footer-item footer-item-right" id="copyright-2-line">© 2020 Scott Silsbe<br>All Rights Reserved</p>
-    <p class="main-footer-item footer-item-right" id="copyright-1-line">© 2020 Scott Silsbe. All Rights Reserved</p>
+    <p class="foot-item foot-item-right" id="copyright-2-line">© 2020 Scott Silsbe<br>All Rights Reserved</p>
+    <p class="foot-item foot-item-right" id="copyright-1-line">© 2020 Scott Silsbe. All Rights Reserved</p>
   </footer>
 </div>
 

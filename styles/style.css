@@ -581,8 +581,8 @@ input:checked + .theme-switch-slider { background-color: var(--colG3); }
 
 input:checked + .theme-switch-slider:before {
   -webkit-transform: translateX(20px);
-  -ms-transform: translateX(20px);
-  transform: translateX(20px);
+      -ms-transform: translateX(20px);
+          transform: translateX(20px);
 }
 
 /* hide theme-switch text */
@@ -1168,3 +1168,13 @@ input[type=submit]:hover {
   background-color: var(--accent-hover);
   border: 3px solid var(--accent-hover);
 }
+
+/*MISC
+888b     d888 8888888  .d8888b.   .d8888b.  
+8888b   d8888   888   d88P  Y88b d88P  Y88b 
+88888b.d88888   888   Y88b.      888    888 
+888Y88888P888   888    "Y888b.   888        
+888 Y888P 888   888       "Y88b. 888        
+888  Y8P  888   888         "888 888    888 
+888   "   888   888   Y88b  d88P Y88b  d88P 
+888       888 8888888  "Y8888P"   "Y8888P"  */
