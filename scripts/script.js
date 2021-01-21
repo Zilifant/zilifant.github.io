@@ -71,7 +71,6 @@ function switchTheme(e) {
     '<a href="https://en.wikipedia.org/wiki/Augustine_of_Hippo">Love, and do what you will.</a>',
     '<a href="https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow">Nothing in life is as important as you think it is, while you are thinking about it.</a>',
     '<a href="https://en.wikiquote.org/wiki/Bruce_Lee">Freedom discovers man the moment he loses concern over what impression he is making or about to make.</a>',
-    '<a href="https://en.wikiquote.org/wiki/Johann_Wolfgang_von_Goethe">That which you inherit from your fathers, you must earn in order to possess.</a>'
   ];
   let randomQuote = Math.floor(Math.random() * quotes.length);
   document.getElementById("foot-quote-display").innerHTML = quotes[randomQuote];
@@ -86,7 +85,6 @@ let i;
 
 for (i = 0; i < exl.length; i++) {
   exl[i].addEventListener("click", function() {
-    this.classList.toggle("active");
     this.classList.toggle("rotated");
     let content = this.nextElementSibling;
     if (content.style.maxHeight) {
