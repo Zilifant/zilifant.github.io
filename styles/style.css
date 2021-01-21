@@ -710,7 +710,7 @@ input:checked + .theme-switch-slider:before {
     transform: translateY(192px);
   }
 
-  .drop-nav:hover .drop-nav-btn > .drop-nav-btn-icon > .drop-nav-btn-icon-bar { background: var(--accent); }
+  .drop-nav:hover .drop-nav-btn-icon-bar { background: var(--accent); }
 
   .drop-nav-items-item { background: var(--nav-bg); }
 
@@ -934,7 +934,7 @@ Y88b  d88P Y88b. .d88P 888   Y8888
   margin-bottom: 0;
 }
 
-.exl-btn:hover .exl-btn-icon-wrap > .exl-btn-icon-fore { background: var(--accent-hover); }
+.exl-btn:hover .exl-btn-icon-fore { background: var(--accent-hover); }
 
 .exl-btn:hover h5 { color: var(--text-hover); }
 
@@ -974,8 +974,6 @@ Y88b  d88P Y88b. .d88P 888   Y8888
        -o-transform: rotate(135deg);
           transform: rotate(135deg);
 }
-
-.rotated:hover .exl-btn-icon-wrap > .exl-btn-icon-fore { background: var(--accent-hover); }
 
 .exl-btn-text { margin-left: .5rem; }
 
