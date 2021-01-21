@@ -831,10 +831,7 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 .side-left { background: var(--content-bg); }
 
 .content > * {
-  margin-top: 1rem;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-  margin-bottom: 1rem;
+  margin: 1rem 1.5rem;
   line-height: 1.75rem;
 }
 
@@ -855,16 +852,11 @@ Y88b  d88P Y88b. .d88P 888   Y8888
   align-items: center;
 }
 
-.horz-bar,
-.horz-bar-exl-btn,
-.horz-bar-exl-content {
-  height: 1px;
-  background: var(--horz-bar);
-}
-
 .horz-bar {
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  height: 1px;
+  width: 100%;
+  margin: 1rem 1.5rem;
+  background: var(--horz-bar);
 }
 
 /* make 2-column pages into 1-column */
