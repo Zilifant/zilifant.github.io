@@ -390,54 +390,6 @@ p, ul, ol, li {
   letter-spacing: .02rem;
 }
 
-/*MISC
-888b     d888 8888888  .d8888b.   .d8888b.  
-8888b   d8888   888   d88P  Y88b d88P  Y88b 
-88888b.d88888   888   Y88b.      888    888 
-888Y88888P888   888    "Y888b.   888        
-888 Y888P 888   888       "Y88b. 888        
-888  Y8P  888   888         "888 888    888 
-888   "   888   888   Y88b  d88P Y88b  d88P 
-888       888 8888888  "Y8888P"   "Y8888P"  */
-
-.preload,
-.preload:before {
-  -webkit-transition: none !important;
-     -moz-transition: none !important;
-      -ms-transition: none !important;
-       -o-transition: none !important;
-          transition: none !important;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.content-title {
-  font-weight: var(--theme-weight-adjust-title-text);
-  text-transform: uppercase;
-  letter-spacing: .1rem;
-}
-
-.horz-bar,
-.horz-bar-exl-btn,
-.horz-bar-exl-content {
-  height: 1px;
-  background: var(--horz-bar);
-}
-
-.horz-bar {
-  margin-top: 1rem !important;
-  margin-bottom: 2rem !important;
-}
-
-.horz-bar-writing {
-  margin-top: 2rem !important;
-  margin-bottom: 2rem !important;
-}
-
 /* GRID
  .d8888b.  8888888b.  8888888 8888888b.  
 d88P  Y88b 888   Y88b   888   888  "Y88b 
@@ -566,6 +518,8 @@ Y88b  d88P 8888P   Y8888   888       888
   background-color: var(--colG3);
   -webkit-transition: .2s;
      -moz-transition: .2s;
+      /* -ms-transition: .2s; */
+       -o-transition: .2s;
           transition: .2s;
 }
 
@@ -581,6 +535,8 @@ Y88b  d88P 8888P   Y8888   888       888
   box-shadow: 0 0 3px .25px var(--colG4);
   -webkit-transition: .2s;
      -moz-transition: .2s;
+      /* -ms-transition: .2s; */
+       -o-transition: .2s;
           transition: .2s;
 }
 
@@ -588,7 +544,9 @@ input:checked + .theme-switch-slider { background-color: var(--colG3); }
 
 input:checked + .theme-switch-slider:before {
   -webkit-transform: translateX(20px);
+     -moz-transform: translateX(20px);
       -ms-transform: translateX(20px);
+       -o-transform: translateX(20px);
           transform: translateX(20px);
 }
 
@@ -813,7 +771,7 @@ input:checked + .theme-switch-slider:before {
   text-align: right;
 }
 
-#copyright-1-line { display: none; }
+.copyright-1-line { display: none; }
 
 .foot-social-icon {
   display: flex;
@@ -848,8 +806,8 @@ input:checked + .theme-switch-slider:before {
 
   .foot-item-center { order: -1; }
 
-  #copyright-2-line { display: none; }
-  #copyright-1-line { display: flex; }
+  .copyright-2-line { display: none; }
+  .copyright-1-line { display: flex; }
 }
 
 /* CONTENT
@@ -886,6 +844,30 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 .content-30-left > * { margin-right: 1rem; }
 .content-70-right { width: 70%; }
 .content-70-right > * { margin-left: 1rem; }
+
+.content-title {
+  font-weight: var(--theme-weight-adjust-title-text);
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+}
+
+.content-text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.horz-bar,
+.horz-bar-exl-btn,
+.horz-bar-exl-content {
+  height: 1px;
+  background: var(--horz-bar);
+}
+
+.horz-bar {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
 
 /* make 2-column pages into 1-column */
 @media (max-width: 800px) {
@@ -990,6 +972,8 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 .rotated .exl-btn-icon-wrap {
   -webkit-transform: rotate(135deg);
      -moz-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+       -o-transform: rotate(135deg);
           transform: rotate(135deg);
 }
 
@@ -1099,6 +1083,11 @@ Y88b  d88P Y88b. .d88P 888   Y8888
   color: var(--cyan5);
 }
 
+.horz-bar-writing {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 /*CONTACT FORM
 8888888888  .d88888b.  8888888b.  888b     d888 
 888        d88P" "Y88b 888   Y88b 8888b   d8888 
@@ -1166,4 +1155,23 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: var(--accent-hover);
   border: 3px solid var(--accent-hover);
+}
+
+/*MISC
+888b     d888 8888888  .d8888b.   .d8888b.  
+8888b   d8888   888   d88P  Y88b d88P  Y88b 
+88888b.d88888   888   Y88b.      888    888 
+888Y88888P888   888    "Y888b.   888        
+888 Y888P 888   888       "Y88b. 888        
+888  Y8P  888   888         "888 888    888 
+888   "   888   888   Y88b  d88P Y88b  d88P 
+888       888 8888888  "Y8888P"   "Y8888P"  */
+
+.preload,
+.preload:before {
+  -webkit-transition: none;
+     -moz-transition: none;
+      /* -ms-transition: none; */
+       -o-transition: none;
+          transition: none;
 }

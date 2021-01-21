@@ -33,6 +33,8 @@ if (currentTheme) {
   } else {
     imgsToLightMode();
   }
+} else {
+  imgsToLightMode()
 }
 
 function imgsToDarkMode() {
