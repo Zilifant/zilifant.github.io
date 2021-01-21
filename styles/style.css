@@ -658,7 +658,6 @@ input:checked + .theme-switch-slider:before {
     color: var(--drop-nav-btn-text);
     text-decoration: none;
     font-size: 1.25rem;
-    float: right;
   }
 
   .drop-nav-btn-icon {
@@ -751,7 +750,6 @@ input:checked + .theme-switch-slider:before {
   margin: 0 1.5rem;
   font-size: .75rem;
   font-weight: var(--theme-weight-adjust-text);
-  font-weight: 400;
   line-height: 17px;
   color: var(--foot-text);
   opacity: 75%;
@@ -885,13 +883,13 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 888    888 Y88b. .d88P 888   "   888 888        
 888    888  "Y88888P"  888       888 8888888888 */
 
-.headshot-wrapper { object-fit: contain; }
+.headshot-wrapper {
+  object-fit: contain;
+  border: 1px solid var(--horz-bar); }
 
 .headshot-wrapper > img {
   width: 100%;
-  overflow: hidden;
   display: block;
-  border: 1px solid var(--horz-bar);
 }
 
 /* hide headshot on HOME page */
@@ -1040,7 +1038,7 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 8888P   Y8888 888  T88b    888       888     
 888P     Y888 888   T88b 8888888     888     */
 
-#closed-system-title {
+.writing-title {
   width: 20rem;
   display: block;
   margin-left: auto;
