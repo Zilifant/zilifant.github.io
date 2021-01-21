@@ -6,8 +6,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   setTimeout(function() {
     let targetNodes = document.querySelectorAll('.preload');
-    let i;
-    for (i = 0; i < targetNodes.length; i++) {
+    for (let i = 0; i < targetNodes.length; i++) {
       targetNodes[i].classList.remove('preload');
     }
   }, 1000)
@@ -51,6 +50,13 @@ function imgsToLightMode() {
   }
 }
 
+// function imgsToLightMode() {
+//   let imglist = document.querySelectorAll(".switchable-img");
+//   imglist.forEach(element => {
+//     element.setAttribute('src', `../assets/images/${element.id}.png`);
+//   })
+// }
+
 function switchTheme(e) {
   if (e.target.checked) {
     document.documentElement.setAttribute('current-theme', 'dark');
@@ -82,11 +88,10 @@ function switchTheme(e) {
 //Collapsible Lists--
 //-------------------
 
-let exl = document.getElementsByClassName("exl-btn");
-let i;
+let exl = document.querySelectorAll(".exl-btn");
 
-for (i = 0; i < exl.length; i++) {
-  exl[i].addEventListener("click", function() {
+exl.forEach(element => {
+  element.addEventListener("click", function() {
     this.classList.toggle("rotated");
     let content = this.nextElementSibling;
     if (content.style.maxHeight) {
@@ -95,4 +100,4 @@ for (i = 0; i < exl.length; i++) {
       content.style.maxHeight = content.scrollHeight + "px";
     }
   });
-}
+});
