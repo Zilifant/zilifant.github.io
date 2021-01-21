@@ -1040,7 +1040,7 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 
 .story-subtitle {
   text-align: center;
-  margin-top: 0;
+  margin-top: .5rem;
   margin-bottom: 2rem;
   font-size: 17px;
 }
@@ -1072,6 +1072,7 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 }
 
 .horz-bar-writing {
+  width: calc(100% - 3rem);
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
