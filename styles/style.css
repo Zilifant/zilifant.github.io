@@ -197,7 +197,7 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --truG3: RGBA(212,212,212,1);
   --truG4: RGBA(163,163,163,1);
   --truG5: RGBA(115,115,115,1);
-  --truG6: RGBA(82,82,82,1);
+  --truG6: rgba(82,82,82,1);
   --truG7: RGBA(64,64,64,1);
   --truG8: RGBA(38,38,38,1);
   --truG9: RGBA(23,23,23,1);
@@ -1056,7 +1056,7 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 8888P   Y8888 888  T88b    888       888     
 888P     Y888 888   T88b 8888888     888     */
 
-#closed-system-title-img {
+#closed-system-title {
   width: 20rem;
   display: block;
   margin-left: auto;

@@ -1,8 +1,8 @@
 //-----------------------------
-//Theme-Switcher-Slider--------
+//General----------------------
 //-----------------------------
 
-// Remove Preload 
+// remove preload class after 1s (prevents animations on page load)
 document.addEventListener("DOMContentLoaded", function() {
   setTimeout(function() {
     let targetNodes = document.querySelectorAll('.preload');
@@ -13,7 +13,13 @@ document.addEventListener("DOMContentLoaded", function() {
   }, 1000)
 })
 
+//-----------------------------
+//Theme-Switcher-Slider--------
+//-----------------------------
+
+// connect js to theme-switch element
 const themeSwitch = document.querySelector('.theme-switch-bg input[type="checkbox"]');
+themeSwitch.addEventListener('change', switchTheme, false);
 
 // check if any theme has been saved to local storage; assign to currentTheme if so
 const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
@@ -27,44 +33,22 @@ if (currentTheme) {
   } else {
     imgsToLightMode();
   }
-} else {
-  if (document.getElementById("headshot")) {
-    document.getElementById("headshot").setAttribute('src', '../assets/images/headshot.jpg');
-  }
-  if (document.getElementById("closed-system-title-img")) {
-    document.getElementById("closed-system-title-img").setAttribute('src', '../assets/icons/closed-system-title-light.svg');
-  }
 }
 
 function imgsToDarkMode() {
-  let imglist = document.getElementsByClassName("light-dark-img");
+  let imglist = document.getElementsByClassName("switchable-img");
   for (let i = 0; i < imglist.length; i++) {
-    imglist[i].setAttribute('src', `../assets/partner-logos/${imglist[i].id}-light.png`);
+    imglist[i].setAttribute('src', `../assets/images/${imglist[i].id}-alt.png`);
   }
-  if (document.getElementById("headshot")) {
-    document.getElementById("headshot").setAttribute('src', '../assets/images/headshot-dark.png');
-  };
-  if (document.getElementById("closed-system-title-img")) {
-    document.getElementById("closed-system-title-img").setAttribute('src', '../assets/icons/closed-system-title-dark.svg');
-  };
 }
 
 function imgsToLightMode() {
-  let imglist = document.getElementsByClassName("light-dark-img");
+  let imglist = document.getElementsByClassName("switchable-img");
   for (let i = 0; i < imglist.length; i++) {
-    imglist[i].setAttribute('src', `../assets/partner-logos/${imglist[i].id}-color.png`);
-  };
-  if (document.getElementById("headshot")) {
-    document.getElementById("headshot").setAttribute('src', '../assets/images/headshot.jpg');
-  };
-  if (document.getElementById("closed-system-title-img")) {
-    document.getElementById("closed-system-title-img").setAttribute('src', '../assets/icons/closed-system-title-light.svg');
-  };
+    imglist[i].setAttribute('src', `../assets/images/${imglist[i].id}.png`);
+  }
 }
 
-themeSwitch.addEventListener('change', switchTheme, false);
-
-//
 function switchTheme(e) {
   if (e.target.checked) {
     document.documentElement.setAttribute('current-theme', 'dark');
