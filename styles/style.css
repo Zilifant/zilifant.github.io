@@ -474,6 +474,25 @@ Y88b  d88P 888  T88b    888   888  .d88P
   letter-spacing: .1rem;
 }
 
+.github-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 58px;
+  width: 58px;
+  background: var(--header-text);
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.github-corner img {
+  width: 90%;
+  display: block;
+  transform: rotate(45deg);
+  margin: 0 auto;
+}
+
 /* hide default header */
 @media (max-width: 600px) { .main-head { display: none; } }
 
