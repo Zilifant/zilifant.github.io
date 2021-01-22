@@ -368,6 +368,7 @@ html, body {
   margin: 0;
   padding: 0;
   background: var(--bg);
+  overflow: overlay;
 }
 
 *, *:before, *:after {
@@ -518,7 +519,6 @@ Y88b  d88P 8888P   Y8888   888       888
   background-color: var(--colG3);
   -webkit-transition: .2s;
      -moz-transition: .2s;
-      /* -ms-transition: .2s; */
        -o-transition: .2s;
           transition: .2s;
 }
@@ -535,7 +535,6 @@ Y88b  d88P 8888P   Y8888   888       888
   box-shadow: 0 0 3px .25px var(--colG4);
   -webkit-transition: .2s;
      -moz-transition: .2s;
-      /* -ms-transition: .2s; */
        -o-transition: .2s;
           transition: .2s;
 }
@@ -854,9 +853,21 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 
 .horz-bar {
   height: 1px;
-  width: 100%;
   margin: 1rem 1.5rem;
   background: var(--horz-bar);
+}
+
+.section-divider {
+  width: 100%;
+}
+
+.subsection-divider {
+  max-width: fill-available;
+}
+
+.writing-divider {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* make 2-column pages into 1-column */
@@ -922,8 +933,9 @@ Y88b  d88P Y88b. .d88P 888   Y8888
   cursor: pointer;
   display: flex;
   border-radius: var(--rad);
-  padding-bottom: 1rem;
+  /* padding-bottom: 1rem; */
   margin-bottom: 0;
+  /* background: var(--foot-bg); */
 }
 
 .exl-btn:hover .exl-btn-icon-fore { background: var(--accent-hover); }
@@ -947,9 +959,9 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 }
 
 .exl-btn-icon-back {
-  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
   position: relative;
   top: calc(-1.25rem - 1px);
   left: -1px;
@@ -995,27 +1007,30 @@ Y88b  d88P Y88b. .d88P 888   Y8888
   margin-top: 0;
   margin-bottom: 0;
   overflow: hidden;
+  border-radius: var(--rad);
   transition: max-height .3s ease-in-out;
+  /* background: var(--foot-social-icon-bg); */
 }
 
 .exl-content-ul {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  margin-left: 1.75rem;
   list-style-type: none;
 }
 
 .exl-content-li {
   margin-bottom: .25rem;
-  margin-left: calc(1.75rem + 10px);
-  padding-left: 10px;
-  text-indent: -10px;
+  padding-left: 2px;
+  text-indent: -11px;
 }
 
 .exl-content-li::before {
-  content: "▸";
-  color: var(--accent);
+  content: "\2023";
+  font-family: Courier, monospace;
   position: relative;
-  left: -10px;
+  left: -14px;
+  color: var(--accent);
 }
 
 /*WRITING
@@ -1069,12 +1084,6 @@ Y88b  d88P Y88b. .d88P 888   Y8888
   font-family: monospace;
   font-weight: normal;
   color: var(--cyan5);
-}
-
-.horz-bar-writing {
-  width: calc(100% - 3rem);
-  margin-top: 2rem;
-  margin-bottom: 2rem;
 }
 
 /*CONTACT FORM
