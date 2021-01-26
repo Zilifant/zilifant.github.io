@@ -266,15 +266,125 @@ html, body {
 
 h1,h2,h3,h4,h5,h6,li,ol,p,ul{font-style:normal;text-decoration:none}h1{font-size:2.5rem}h2{font-size:2.25rem}h3{font-size:2rem}h4{font-size:1.75rem}h5{font-size:1.5rem}h6{font-size:1.25rem}
 
-.bg-img {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  z-index: -1;
+.title-wrapper { display: flex; grid-area: ttl; }
+.form-wrapper  { display: flex; grid-area: frm; }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr fit-content(800px) 1fr;
+  grid-template-areas:
+  " .   .   . "
+  " .  ttl  . "
+  " .  frm  . "
+  " .   .   . ";
+  background-image: url("../assets/nicolle/bg-detailed.jpg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
 }
 
-.bg {
+.title-wrapper {
+  /* background: olivedrab; */
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.title {
+  font-size: 4rem;
+  color: antiquewhite;
+}
+
+.form-wrapper {
+  /* background: palevioletred; */
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.hotdog-form label {
+  font-size: 2rem;
+  color: antiquewhite;
+}
+
+.hotdog-form input[type=text] {
+  color: antiquewhite;
+  background:rgb(0, 0, 0);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  padding: .5rem;
+  border: none;
+  margin: .5rem 0;
+}
+
+.hotdog-form input[type=submit] {
+  color: antiquewhite;
+  background:rgb(0, 0, 0);
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: .5rem;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+}
+
+.ainsley-container,
+.cowboy-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -50%;
+  margin-left: auto; 
+  margin-right: auto; 
+  width: fit-content;
+  overflow: hidden;
+  -webkit-transition: 2s;
+     -moz-transition: 2s;
+       -o-transition: 2s;
+          transition: 2s;
+}
+
+.ainsley-container img,
+.cowboy-container img {
+  width: 100%;
+  max-width: max-content;
+}
+
+.ainsley-container p,
+.cowboy-container p {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-weight: 500;
+  font-size: 2rem;
+  color: black;
+}
+
+.ainsley-container button,
+.cowboy-container button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: antiquewhite;
+  background:rgb(0, 0, 0);
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-size: 1.5rem;
+  padding: .5rem;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+}
+
+.revealed {
+  -webkit-transform: translateY(160%);
+     -moz-transform: translateY(160%);
+      -ms-transform: translateY(160%);
+       -o-transform: translateY(160%);
+          transform: translateY(160%);
+}
+/* .bg {
   background-image: url("../assets/nicolle/bg-detailed.jpg");
   height: 100%;
   background-position: center bottom;
@@ -296,4 +406,6 @@ h1,h2,h3,h4,h5,h6,li,ol,p,ul{font-style:normal;text-decoration:none}h1{font-size
 .text {
   font-size: 4rem;
   color: antiquewhite;
-}
+  width: 100%;
+  text-align: center;
+} */
