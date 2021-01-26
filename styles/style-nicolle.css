@@ -247,6 +247,9 @@ html, body {
   margin: 0;
   padding: 0;
   background: var(--black);
+  height: 100%;
+  /* background: url("../assets/nicolle/bg-light.jpg");
+  background-size: 100%; */
   overflow: overlay;
 }
 
@@ -266,9 +269,17 @@ h1,h2,h3,h4,h5,h6,li,ol,p,ul{font-style:normal;text-decoration:none}h1{font-size
 .bg-img {
   position: absolute;
   right: 0;
-  top: 0;
+  bottom: 0;
   width: 100%;
   z-index: -1;
+}
+
+.bg {
+  background-image: url("../assets/nicolle/bg-detailed.jpg");
+  height: 100%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .text-wrapper {
