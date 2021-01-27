@@ -391,6 +391,85 @@ p, ul, ol, li {
   letter-spacing: .02rem;
 }
 
+.u35 {
+  text-rendering: geometricPrecision;
+  font-weight: 350;
+}
+.v35 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 350;
+}
+.w35 {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 350;
+}
+.x35 {
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 350;
+}
+.y35 {
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 350;
+}
+.u40 {
+  text-rendering: geometricPrecision;
+  font-weight: 400;
+}
+.v40 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+}
+.w40 {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+}
+.x40 {
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+}
+.y40 {
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+}
+.u45 {
+  text-rendering: geometricPrecision;
+  font-weight: 450;
+}
+.v45 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 450;
+}
+.w45 {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 450;
+}
+.x45 {
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 450;
+}
+.y45 {
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 450;
+}
+
 /* GRID
  .d8888b.  8888888b.  8888888 8888888b.  
 d88P  Y88b 888   Y88b   888   888  "Y88b 
