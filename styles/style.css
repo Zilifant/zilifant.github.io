@@ -590,7 +590,7 @@ input:checked + .theme-switch-slider:before {
 
 .main-nav-item,
 .drop-nav-btn > div,
-.drop-nav-items-item > div {
+.drop-nav-item > div {
   text-transform: uppercase;
   letter-spacing: .1rem;
 }
@@ -613,13 +613,13 @@ input:checked + .theme-switch-slider:before {
 }
 
 .main-nav-item,
-.drop-nav-items-item {
+.drop-nav-item {
   background-size: 100% 200%;
   transition: .15s ease-in-out;
 }
 
 .main-nav-item:hover,
-.drop-nav-items-item:hover {
+.drop-nav-item:hover {
   background-position: 0 -100%;
   color: var(--header-text);
   font-weight: var(--theme-weight-adjust-title-text);
@@ -713,7 +713,7 @@ input:checked + .theme-switch-slider:before {
     text-decoration: none;
   }
 
-  .drop-nav-items-item > div {
+  .drop-nav-item > div {
     display: block;
     padding: .75rem 1.5rem;
     color: var(--nav-text);
@@ -734,7 +734,7 @@ input:checked + .theme-switch-slider:before {
 
   .drop-nav:hover .drop-nav-btn-icon-bar { background: var(--accent); }
 
-  .drop-nav-items-item { background: var(--nav-bg); }
+  .drop-nav-item { background: var(--nav-bg); }
 
   .this-page-drop { background: var(--nav-bg-this-page); }
 }
