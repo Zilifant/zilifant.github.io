@@ -1050,10 +1050,26 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 
 .exl-content-li::before {
   content: "\2023";
-  font-family: Courier, monospace;
+  font-family: 'Times New Roman', Times, serif;
   position: relative;
   left: -14px;
   color: var(--accent);
+}
+
+.li2::before {
+  content: "\25ba";
+}
+.li3::before {
+  content: "\25b8";
+}
+.li4::before {
+  content: "\25a0";
+}
+.li5::before {
+  content: "\25fc";
+}
+.li6::before {
+  content: "\25cf";
 }
 
 /*WRITING
