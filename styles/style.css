@@ -722,7 +722,10 @@ input:checked + .theme-switch-slider:before {
     font-size: 1.25rem;
   }
 
-  .drop-nav-items-item:hover > div { background: var(--accent); }
+  .drop-nav-item-home:hover > div    { background: var(--accent-home); }
+  .drop-nav-item-resume:hover > div  { background: var(--accent-resume); }
+  .drop-nav-item-writing:hover > div { background: var(--accent-writing); }
+  .drop-nav-item-contact:hover > div { background: var(--accent-contact); }
 
   .drop-nav:hover .drop-nav-items {
     display: block;
@@ -1189,7 +1192,6 @@ input[type=submit]:hover {
 .preload:before {
   -webkit-transition: none;
      -moz-transition: none;
-      /* -ms-transition: none; */
        -o-transition: none;
           transition: none;
 }
