@@ -245,7 +245,8 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --text-hover: var(--truG6);
   --content-bg-img: none;
   --content-bg-img-size: 0;
-  --content-bg: var(--white);
+  /* --content-bg: var(--white); */
+  --content-bg: rgb(240, 243, 245);
   --header-text: var(--colG2);
   --header-bg: var(--truG9);
   --header-bg-img: url("../assets/backgrounds/dflowers-clear-1280.png");
@@ -269,6 +270,10 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --form-text-placeholder: var(--colG5);
   --partner-logo-bg: var(--colG1);
   --horz-bar: var(--colG3);
+  --exl-btn-bg: var(--white);
+  --exl-btn-shadow: #cccccc;
+  --exl-btn-border: none;
+  --exl-btn-border-hover: none;
   --accent-home: var(--pink4);
   --accent-resume: var(--cyan5);
   --accent-writing: var(--oran4);
@@ -312,10 +317,14 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --form-text-placeholder: var(--colG5);
   --partner-logo-bg: var(--colG2);
   --horz-bar: var(--gray7);
+  --exl-btn-bg: var(--gray8);
+  --exl-btn-shadow: none;
+  --exl-btn-border: 1px solid var(--gray7);
   --accent-home: var(--pink5);
   --accent-resume: var(--cyan6);
   --accent-writing: var(--oran5);
   --accent-contact: var(--emer6);
+  --exl-btn-border-hover: 1px solid var(--accent-resume);
   --theme-weight-adjust-text: 350;
   --theme-weight-adjust-title-text: 400;
   --exl-btn-icon-border-fix: rgba(36, 36, 37, 1);
@@ -1043,10 +1052,18 @@ Y88b  d88P Y88b. .d88P 888   Y8888
   cursor: pointer;
   display: flex;
   border-radius: var(--rad);
-  /* padding-bottom: 1rem; */
+  box-shadow: 0 0 2px 0 var(--exl-btn-shadow);
+  border: var(--exl-btn-border);
+  padding: 1rem;
   margin-bottom: 0;
-  /* background: var(--foot-bg); */
+  background: var(--exl-btn-bg);
+  -webkit-transition: .2s;
+     -moz-transition: .2s;
+       -o-transition: .2s;
+          transition: .2s;
 }
+
+.exl-btn:hover { border: var(--exl-btn-border-hover)}
 
 .exl-btn:hover .exl-btn-icon-fore { background: var(--accent-hover); }
 
