@@ -301,7 +301,7 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --drop-nav-btn-bg: var(--truG9);
   --drop-nav-btn-bg-hover: var(--bg);
   --foot-social-icon-bg-hover: var(--accent);
-  --foot-social-icon-bg: var(--gray8);
+  --foot-social-icon-bg: var(--gray7);
   --foot-text: var(--gray6);
   --foot-bg: var(--gray9);
   --foot-border: var(--gray7);
@@ -841,6 +841,10 @@ input:checked + .theme-switch-slider:before {
 .foot-right {
   background: var(--foot-bg);
   border-top: 1px solid var(--foot-border);
+  -webkit-transition: background .2s;
+     -moz-transition: background .2s;
+       -o-transition: background .2s;
+          transition: background .2s;
 }
 
 .foot-item { display: flex; }
@@ -875,21 +879,25 @@ input:checked + .theme-switch-slider:before {
 .foot-social-icon {
   display: flex;
   vertical-align: bottom;
-  height: 35px;
-  width: 35px;
-  background: var(--foot-social-icon-bg);
+  height: 2.25rem;
+  width: 2.25rem;
   border-radius: var(--rad);
   margin-left: .5rem;
   margin-right: .5rem;
 }
 
-.foot-social-icon > img {
-  display: block;
+.foot-social-icon svg {
+  height: 2rem;
+  width: auto;
   margin: auto;
-  height: 66%;
+  fill: var(--foot-social-icon-bg);
+  -webkit-transition: .2s;
+     -moz-transition: .2s;
+       -o-transition: .2s;
+          transition: .2s;
 }
 
-.foot-social-icon:hover { background: var(--foot-social-icon-bg-hover); }
+.foot-social-icon svg:hover { fill: var(--foot-social-icon-bg-hover); }
 
 /* center all footer content for mobile */
 @media (max-width: 600px) {
