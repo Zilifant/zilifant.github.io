@@ -221,6 +221,7 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --colG7: rgba(55,65,81,1);
   --colG8: rgba(31,41,55,1);
   --colG9: rgba(17,24,39,1);
+  --newG1: rgba(240,243,245,1);
   --bluG0: rgba(248,250,252,1);
   --bluG1: rgba(241,245,249,1);
   --bluG2: rgba(226,232,240,1);
@@ -249,8 +250,7 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --text-hover: var(--truG6);
   --content-bg-img: none;
   --content-bg-img-size: 0;
-  /* --content-bg: var(--white); */
-  --content-bg: rgb(240, 243, 245);
+  --content-bg: var(--newG1);
   --header-text: var(--colG2);
   --header-bg: var(--truG9);
   --header-bg-img: url("../assets/backgrounds/dflowers-clear-1280.png");
@@ -1057,12 +1057,11 @@ Y88b  d88P Y88b. .d88P 888   Y8888
   box-shadow: 0 0 2px 0 var(--exl-btn-shadow);
   border: var(--exl-btn-border);
   padding: 1rem;
-  margin-bottom: 0;
   background: var(--exl-btn-bg);
-  -webkit-transition: .2s, max-height .4s ease-in-out;
-     -moz-transition: .2s, max-height .4s ease-in-out;
-       -o-transition: .2s, max-height .4s ease-in-out;
-          transition: .2s, max-height .4s ease-in-out;
+  -webkit-transition: .2s, height .4s ease-in-out;
+     -moz-transition: .2s, height .4s ease-in-out;
+       -o-transition: .2s, height .4s ease-in-out;
+          transition: .2s, height .4s ease-in-out;
 }
 
 .exl-btn:hover { border: var(--exl-btn-border-hover); }
@@ -1143,24 +1142,26 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 
 .exl-content-ul {
   margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-left: 1.75rem;
   list-style-type: none;
 }
 
 .exl-content-li {
   margin-bottom: .25rem;
   padding-left: 2px;
-  text-indent: -11px;
+  /* text-indent: -11px; */
 }
 
-.exl-content-li::before {
+.exl-content-li:last-child {
+  margin-bottom: 0;
+}
+
+/* .exl-content-li::before {
   content: "\2023";
   font-family: 'Times New Roman', Times, serif;
   position: relative;
   left: -14px;
   color: var(--accent);
-}
+} */
 
 .li2::before {
   content: "\25ba";
