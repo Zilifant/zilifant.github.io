@@ -100,15 +100,25 @@ function getNextSiblingWithClass(element, selector) {
   }
 };
 
+// exl.forEach(element => {
+//   element.addEventListener("click", function() {
+//     this.classList.toggle("rotated");
+//     let content = getNextSiblingWithClass(this, ".exl-content");
+//     if (content.style.maxHeight) {
+//       content.style.maxHeight = null;
+//     } else {
+//       content.style.maxHeight = content.scrollHeight + "px";
+//     }
+//   })
+// });
 
 exl.forEach(element => {
   element.addEventListener("click", function() {
     this.classList.toggle("rotated");
-    let content = getNextSiblingWithClass(this, ".exl-content");
-    if (content.style.maxHeight) {
-      content.style.maxHeight = null;
+    if (this.style.maxHeight) {
+      this.style.maxHeight = null;
     } else {
-      content.style.maxHeight = content.scrollHeight + "px";
+      this.style.maxHeight = this.scrollHeight + "px";
     }
   })
 });
