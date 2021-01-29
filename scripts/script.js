@@ -111,16 +111,16 @@ function getNextSiblingWithClass(element, selector) {
 //   })
 // });
 
-exl.forEach(element => {
-  element.addEventListener("click", function() {
-    this.classList.toggle("rotated");
-    if (this.style.maxHeight) {
-      this.style.maxHeight = null;
-    } else {
-      this.style.maxHeight = (this.scrollHeight + 16) + "px";
-    }
-  })
-});
+// exl.forEach(element => {
+//   element.addEventListener("click", function() {
+//     this.classList.toggle("rotated");
+//     if (this.style.maxHeight) {
+//       this.style.maxHeight = null;
+//     } else {
+//       this.style.maxHeight = (this.scrollHeight + 16) + "px";
+//     }
+//   })
+// });
 
 // exl.forEach(element => {
 //   element.addEventListener("click", function() {
@@ -134,14 +134,14 @@ exl.forEach(element => {
 //   })
 // });
 
-// exl.forEach(element => {
-//   element.addEventListener("click", function() {
-//     this.classList.toggle("rotated");
-//     let content = this.nextElementSibling;
-//     if (content.style.maxHeight) {
-//       content.style.maxHeight = null;
-//     } else {
-//       content.style.maxHeight = content.scrollHeight + "px";
-//     }
-//   });
-// });
+exl.forEach(element => {
+  element.addEventListener("click", function() {
+    this.classList.toggle("rotated");
+    let content = this.nextElementSibling;
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+});

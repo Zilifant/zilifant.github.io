@@ -210,7 +210,7 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --gray6: rgba(82,82,91,1);
   --gray7: rgba(63,63,70,1);
   --gray8: rgba(39,39,42,1); --gray8o50: rgba(39,39,42,.5);
-  --gray9: rgba(24,24,27,1);
+  --gray9: rgba(24,24,27,1); --gray9o50: rgba(24,24,27,.5);
   --colG0: rgba(249,250,251,1);
   --colG1: rgba(243,244,246,1);
   --colG2: rgba(229,231,235,1);
@@ -275,12 +275,13 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --partner-logo-bg: var(--colG1);
   --horz-bar: var(--colG3);
   --exl-btn-bg: var(--white);
+  --exl-content-bg: var(--colG2);
   --exl-btn-shadow: var(--truG3);
   --exl-btn-border: 1px solid var(--exl-btn-bg);
   --exl-btn-border-hover: 1px solid var(--exl-btn-bg);
+  --exl-btn-icon-border-fix: var(--exl-btn-bg);
   --theme-weight-adjust-text: 400;
   --theme-weight-adjust-title-text: 450;
-  --exl-btn-icon-border-fix: var(--exl-btn-bg);
 }
 
 :root[current-theme="dark"] .dark-hidden { display: none; }
@@ -322,12 +323,13 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --partner-logo-bg: var(--colG2);
   --horz-bar: var(--gray7);
   --exl-btn-bg: var(--gray8);
+  --exl-content-bg: var(--gray7);
   --exl-btn-shadow: none;
   --exl-btn-border: 1px solid var(--gray7);
   --exl-btn-border-hover: 1px solid var(--accent-resume);
+  --exl-btn-icon-border-fix: var(--exl-btn-bg); /* rgba(36, 36, 37, 1); */
   --theme-weight-adjust-text: 350;
   --theme-weight-adjust-title-text: 400;
-  --exl-btn-icon-border-fix: var(--exl-btn-bg); /* rgba(36, 36, 37, 1); */
 }
 
 :root[current-theme="light"]#page-home {
@@ -1048,27 +1050,7 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 888  T88b  888        Y88b  d88P 
 888   T88b 8888888888  "Y8888P"  */
 
-.exl-btn {
-  cursor: pointer;
-  display: flex;
-  max-height: 118px;
-  overflow: hidden;
-  border-radius: var(--rad);
-  box-shadow: 0 0 2px 0 var(--exl-btn-shadow);
-  border: var(--exl-btn-border);
-  padding: 1rem;
-  background: var(--exl-btn-bg);
-  -webkit-transition: .2s, height .4s ease-in-out;
-     -moz-transition: .2s, height .4s ease-in-out;
-       -o-transition: .2s, height .4s ease-in-out;
-          transition: .2s, height .4s ease-in-out;
-}
-
-.exl-btn:hover { border: var(--exl-btn-border-hover); }
-
 .exl-btn:hover .exl-btn-icon-fore { background: var(--accent-hover); }
-
-.exl-btn:hover h5 { color: var(--text-hover); }
 
 .exl-btn-icon-wrap {
   margin-right: 0;
@@ -1107,6 +1089,22 @@ Y88b  d88P Y88b. .d88P 888   Y8888
           transform: rotate(135deg);
 }
 
+.exl-wrapper {
+  overflow: hidden;
+  border-radius: var(--rad);
+  box-shadow: 0 0 2px 0 var(--exl-btn-shadow);
+  border: var(--exl-btn-border);
+}
+
+.exl-btn {
+  cursor: pointer;
+  display: flex;
+  padding: 1rem;
+  background: var(--exl-btn-bg);
+}
+
+/* .exl-btn:hover { border: var(--exl-btn-border-hover); } */
+
 .exl-btn-text { margin-left: .5rem; }
 
 .exl-btn-text-head {
@@ -1132,17 +1130,17 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 
 .exl-content {
   max-height: 0;
-  margin-top: 0;
-  margin-bottom: 0;
   overflow: hidden;
-  border-radius: var(--rad);
-  transition: max-height .3s ease-in-out;
-  /* background: var(--foot-social-icon-bg); */
+  background: var(--exl-content-bg);
+  -webkit-transition: .2s, max-height .4s ease-in-out;
+     -moz-transition: .2s, max-height .4s ease-in-out;
+       -o-transition: .2s, max-height .4s ease-in-out;
+          transition: .2s, max-height .4s ease-in-out;
 }
 
 .exl-content-ul {
-  margin-top: 1rem;
   list-style-type: none;
+  padding: 1rem 1rem 1rem 2.5rem;
 }
 
 .exl-content-li {
