@@ -280,8 +280,8 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --exl-btn-border: 1px solid var(--exl-btn-bg);
   --exl-btn-border-hover: 1px solid var(--exl-btn-bg);
   --exl-btn-icon-border-fix: var(--exl-btn-bg);
-  --theme-weight-adjust-text: 400;
-  --theme-weight-adjust-title-text: 450;
+  --theme-weight-adjust-text: 350;
+  --theme-weight-adjust-title-text: 400;
 }
 
 :root[current-theme="dark"] .dark-hidden { display: none; }
@@ -1223,10 +1223,9 @@ Y88b  d88P Y88b. .d88P 888   Y8888
   margin-left: 3rem;
   margin-right: 2.5rem;
   margin-bottom: .5rem;
-  line-height: 1rem;
+  line-height: 1.25rem;
   font-size: 1rem;
   font-family: monospace;
-  font-weight: normal;
   color: var(--cyan5);
 }
 
