@@ -1080,7 +1080,7 @@ Y88b  d88P Y88b. .d88P 888   Y8888
   height: 1.25rem;
   width: 1.25rem;
   clip-path: polygon(40% 0, 60% 0, 60% 40%, 100% 40%, 100% 60%, 60% 60%, 60% 100%, 40% 100%, 40% 60%, 0 60%, 0 40%, 40% 40%);
-  background: var(--horz-bar);
+  background: var(--foot-social-icon-bg);
   position: relative;
   -webkit-transition: background-color .2s;
      -moz-transition: background-color .2s;
@@ -1125,7 +1125,7 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 
 /* .exl-btn:hover { background-color: var(--exl-btn-bg-hover); } */
 
-.exl-btn-text { margin-left: .5rem; }
+.exl-btn-text { margin-left: 1rem; }
 
 .exl-btn-text-head {
   display: flex;
@@ -1137,6 +1137,7 @@ Y88b  d88P Y88b. .d88P 888   Y8888
   font-weight: var(--theme-weight-adjust-title-text);
   margin-bottom: 0;
   line-height: 1em;
+  font-size: 1.25rem;
   text-transform: uppercase;
   letter-spacing: .1rem;
 }
@@ -1160,23 +1161,23 @@ Y88b  d88P Y88b. .d88P 888   Y8888
 
 .exl-content-ul {
   list-style-type: none;
-  padding: 1rem 1rem 1rem 2.5rem;
+  padding: 1rem 1rem 1rem 3.25rem;
 }
 
 .exl-content-li {
   margin-bottom: .25rem;
   padding-left: 2px;
-  text-indent: -8px;
+  text-indent: -18px;
 }
 
 .exl-content-li:last-child { margin-bottom: 0; }
 
 .exl-content-li::before {
-  content: "\2023";
+  content: "\2B25";
   font-family: 'Times New Roman', Times, serif;
   position: relative;
-  left: -16px;
-  color: var(--accent);
+  left: -18px;
+  color: var(--foot-social-icon-bg);
 }
 
 .li2::before {
