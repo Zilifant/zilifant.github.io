@@ -336,20 +336,21 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
 
 :root[current-theme="light"]#page-home {
   --accent: var(--pink4);
-  --accent-hover: var(--pink4);
+  --accent-hover: var(--pink3);
 }
 :root[current-theme="light"]#page-resume {
   --accent: var(--cyan5);
-  --accent-hover: var(--cyan5);
+  --accent-hover: var(--cyan4);
 }
 :root[current-theme="light"]#page-writing {
   --accent: var(--oran4);
-  --accent-hover: var(--oran4);
+  --accent-hover: var(--oran3);
 }
 :root[current-theme="light"]#page-contact {
   --accent: var(--emer5);
-  --accent-hover: var(--emer5);
+  --accent-hover: var(--emer4);
 }
+
 :root[current-theme="dark"]#page-home {
   --accent: var(--pink5);
   --accent-hover: var(--pink4);
@@ -800,10 +801,10 @@ input:checked + .theme-switch-slider:before {
     top: -144px;
     width: 100%;
     z-index: 2;
-    -webkit-transition: transform .25s;
-       -moz-transition: transform .25s;
-         -o-transition: transform .25s;
-            transition: transform .25s;
+    -webkit-transition: transform .2s;
+       -moz-transition: transform .2s;
+         -o-transition: transform .2s;
+            transition: transform .2s;
   }
 
   .drop-nav-items > a {
@@ -884,6 +885,10 @@ input:checked + .theme-switch-slider:before {
   left: 0;
   font-style: italic;
   text-decoration: none;
+  -webkit-transition: color .2s;
+     -moz-transition: color .2s;
+       -o-transition: color .2s;
+          transition: color .2s;
 }
 
 .foot-item-left > a:hover { color: var(--accent); }
