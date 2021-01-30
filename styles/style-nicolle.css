@@ -292,6 +292,7 @@ h1,h2,h3,h4,h5,h6,li,ol,p,ul{font-style:normal;text-decoration:none}h1{font-size
 
 .title {
   font-size: 4rem;
+  font-size: 2rem;
   color: antiquewhite;
   font-family: 'Courier New', Courier, monospace;
 }
