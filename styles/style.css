@@ -280,6 +280,7 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --exl-btn-shadow: var(--truG3);
   --exl-btn-border: var(--bdr2) solid var(--exl-btn-bg);
   --exl-btn-border-hover: var(--bdr2) solid var(--exl-btn-bg);
+  --exl-btn-icon-fore: var(--text);
   --exl-btn-icon-border-fix: var(--exl-btn-bg);
   --theme-weight-adjust-text: 350;
   --theme-weight-adjust-title-text: 400;
@@ -329,6 +330,7 @@ Y88b  d88P Y88b. .d88P 888      Y88b. .d88P 888  T88b
   --exl-btn-shadow: var(--gray9);
   --exl-btn-border: var(--bdr2) solid var(--gray7);
   --exl-btn-border-hover: var(--bdr2) solid var(--accent-resume);
+  --exl-btn-icon-fore: var(--text);
   --exl-btn-icon-border-fix: var(--exl-btn-bg); /* rgba(36, 36, 37, 1); */
   --theme-weight-adjust-text: 350;
   --theme-weight-adjust-title-text: 400;
@@ -1078,8 +1080,12 @@ Y88b  d88P Y88b. .d88P 888   Y8888
   height: 1.25rem;
   width: 1.25rem;
   clip-path: polygon(40% 0, 60% 0, 60% 40%, 100% 40%, 100% 60%, 60% 60%, 60% 100%, 40% 100%, 40% 60%, 0 60%, 0 40%, 40% 40%);
-  background: var(--accent);
+  background: var(--horz-bar);
   position: relative;
+  -webkit-transition: background-color .2s;
+     -moz-transition: background-color .2s;
+       -o-transition: background-color .2s;
+          transition: background-color .2s;
 }
 
 /* .exl-btn-icon-back {
@@ -1117,7 +1123,7 @@ Y88b  d88P Y88b. .d88P 888   Y8888
   background: var(--exl-btn-bg);
 }
 
-.exl-btn:hover { background-color: var(--exl-btn-bg-hover); }
+/* .exl-btn:hover { background-color: var(--exl-btn-bg-hover); } */
 
 .exl-btn-text { margin-left: .5rem; }
 
